@@ -16,7 +16,7 @@ import { ContactComponent } from './contact/contact.component';
     HeaderComponent,
     HomeComponent,
     ResumeComponent,
-    ContactComponent
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

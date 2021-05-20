@@ -1,8 +1,9 @@
 *{
     top: 80px;
     position:absolute;
-    background: url(https://images.unsplash.com/photo-1544306094-e2dcf9479da3) no-repeat;
-  /* Keep the inherited background full size. */
+    background: rgb(2,0,36);    
+    background: linear-gradient(90deg, rgb(81, 75, 185) 0%, rgb(107, 169, 240) 50%, rgba(0,212,255,1) 96%);
+    /* Keep the inherited background full size. */
     background-attachment: fixed; 
     background-size: cover;
     display: grid;
@@ -100,10 +101,9 @@
 .intro-container h1{
     background: inherit;
     z-index: 2;
-    top: -9%;
+    top: -98.5%;
     left: 2%;
     justify-content: center;
-
 }
 
 //Projects container block
