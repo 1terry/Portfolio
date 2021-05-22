@@ -7,8 +7,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { ResumeComponent } from './components/resume/resume.component';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { IconsModule, MDBBootstrapModule } from 'angular-bootstrap-md';
 import { ContactComponent } from './contact/contact.component';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,10 @@ import { ContactComponent } from './contact/contact.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    IvyCarouselModule,
+    BrowserAnimationsModule,
+    IconsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
