@@ -1,6 +1,10 @@
 .body{
     margin:0;
     padding:0;
+    font-family: century-gothic, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position:absolute;  
 }
 
 .header-container{
@@ -36,7 +40,6 @@
    left:2%;
    color: white;
    top:22%;
-   font-size: 16px;
 }
 
 .header-right{
@@ -46,5 +49,16 @@
 }
 
 .header-right a{
-    margin-right: 20px;
+    margin-left: 1.3em;
+}
+
+.header-items{
+    font-family: century-gothic, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+}
+
+a{
+    text-decoration: none;
 }
