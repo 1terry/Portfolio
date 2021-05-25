@@ -11,6 +11,7 @@ import { IconsModule, MDBBootstrapModule } from 'angular-bootstrap-md';
 import { ContactComponent } from './contact/contact.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     ResumeComponent,
     ContactComponent,
+    PortfolioComponent,
   ],
   imports: [
     BrowserModule,
