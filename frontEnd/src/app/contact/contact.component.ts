@@ -5,20 +5,21 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
 
-  showSecond=false;
+export class ContactComponent implements OnInit {
+  showSecond: boolean;
+
   Change(){
-    // if(this.showSecond=false){
-    //   this.showSecond=true;
-    //   alert('false')
-    // }else{
-    //   this.showSecond=false;
-      alert('true')
-    // }
+    if(this.showSecond===false){
+      this.showSecond=true;
+      alert(this.showSecond)
+    }else{
+      this.showSecond=false;
+      alert(this.showSecond)
+    }
   }
-  constructor() {
-  
+  constructor() {   
+    this.showSecond = false;
   }
   ngOnInit(): void {
   }
