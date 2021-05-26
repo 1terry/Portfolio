@@ -1,0 +1,114 @@
+* {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgb(83, 119, 236) 0%,
+    rgb(156, 202, 253) 50%,
+    rgb(65, 215, 245) 96%
+  );
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: century-gothic, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  //   position: absolute;
+}
+// background-image: url("/assets/wavey-background.svg");
+
+.background {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  z-index: -10;
+  background-attachment: fixed;
+  position: absolute;
+}
+
+// .project {
+//   width: 25rem;
+//   height: 25rem;
+//   border-radius: 15px;
+//   padding: 5px;
+//   margin-right: 25rem;
+//   z-index: 1;
+//   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+//   background: inherit;
+//   overflow: hidden;
+//   background-color: black;
+
+// }
+
+// .project:before {
+//   content: "";
+//   position: absolute;
+//   z-index: -1;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+//   backdrop-filter: blur(5px);
+//   background: inherit;
+//   margin: -20px;
+// }
+
+.flex-container {
+  /* We first create a flex layout context */
+  display: flex;
+
+  flex-flow: row wrap;
+
+  /* Then we define how is distributed the remaining space */
+  justify-content: space-around;
+  margin-top: 1%;
+  padding-top: 80px;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  padding-bottom: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.flex-item {
+  background: rgba(0, 0, 0, 0);
+  padding: 5px;
+  width: 450px;
+  height: 450px;
+  margin-top: 10px;
+  //   line-height: 450px;
+  color: white;
+  margin-left: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.4);
+}
+
+//   background-size: cover;
+
+.con1 {
+  background-image: url("/assets/EcoBoost.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+.con2 {
+  background-image: url("/assets/CO2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+.con3 {
+  background-image: url("/assets/COVID Visualizer.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+li {
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+}

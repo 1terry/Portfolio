@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
-
+  showSecond=false;
+  Change(){
+    // if(this.showSecond=false){
+    //   this.showSecond=true;
+    //   alert('false')
+    // }else{
+    //   this.showSecond=false;
+      alert('true')
+    // }
+  }
+  constructor() {
+  
+  }
   ngOnInit(): void {
   }
-
 }
