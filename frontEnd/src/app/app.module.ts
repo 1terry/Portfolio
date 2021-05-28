@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -10,8 +10,10 @@ import { ResumeComponent } from './components/resume/resume.component';
 import { IconsModule, MDBBootstrapModule } from 'angular-bootstrap-md';
 import { ContactComponent } from './contact/contact.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from "@angular/material/input"
 
 @NgModule({
   declarations: [
@@ -30,6 +32,11 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     IvyCarouselModule,
     BrowserAnimationsModule,
     IconsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    NoopAnimationsModule,
+    BrowserAnimationsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

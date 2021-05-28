@@ -37,7 +37,7 @@
   position: absolute;
   top: 80px;
   width: 60%;
-  height: 34%;
+  height: 80%;
   margin-right: 20%;
   background-color: whitesmoke;
   background: inherit;
@@ -50,4 +50,56 @@
   overflow: hidden;
   justify-content: center;
   align-items: center;
+}
+
+//Form
+
+.contact {
+  background: inherit;
+}
+
+.contact-header {
+  top: 10%;
+  position: absolute;
+}
+
+.textbox {
+  width: 350px;
+}
+
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
+}
+.center-text {
+  text-align: center;
+}
+form.contact {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+input,
+button {
+  margin-bottom: 10px;
+}
+button {
+  margin-top: 10px;
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+  padding: 4px 16px;
+  transition: 0.4s;
+  width: 100%;
+  margin-top: 10px;
+}
+button:hover:enabled {
+  color: white;
+  background-color: black;
 }

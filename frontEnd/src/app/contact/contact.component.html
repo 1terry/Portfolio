@@ -1,7 +1,32 @@
 <!-- <a class="hvr-float">Click me I don't go anywhere</a> -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cooltipz-css@1.6.7/cooltipz.css " />
 <!-- <button (click)="Change()">Turn me on</button> -->
-<div class="contact-container">
+<div class="contact-container hvr-grow">
     
+  <h1 class="contact-header">Contact me!</h1>
+
+<form class="contact" [formGroup]="form" method="post" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput [formControl]="name" required>
+      <mat-error *ngIf="name.invalid">Please enter your name</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput [formControl]="email" placeholder="t.juottawa@gmail.com" required>
+      <mat-error *ngIf="email.invalid">Please enter a valid email</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Message</mat-label>
+      <textarea matInput [formControl]="message" maxlength="256" placeholder="I'm interested in..." required></textarea>
+      <mat-hint align="end"> {{message.value?.length || 0}}/256</mat-hint>
+      <mat-error *ngIf="message.invalid">Please enter a message</mat-error>
+    </mat-form-field>
+    <button [disabled]="isLoading" class="submit" type="submit">Submit</button>
+    <input [formControl]="honeypot" class="hidden" type="text" />
+    <div [ngClass]="!submitted? 'hidden' : 'visible'" class="center-text">
+      <span>{{responseMessage}}</span>
+    </div>
+  </form>
 </div>
 <span class="background"></span>
