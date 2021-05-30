@@ -12,4 +12,15 @@ export class PortfolioComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  toProj1():void{
+    window.open("https://www.figma.com/file/NOGYTw7FKEc3HkpVhoA0mW/Prototype-Design-Sprint");
+  }
+
+  toProj2():void{
+    window.open("https://vast-wave-55816.herokuapp.com/");
+  }
+
+  toProj3():void{
+    window.open("https://htn2021covid.herokuapp.com/");
+  }
 }

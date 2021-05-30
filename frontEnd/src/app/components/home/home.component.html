@@ -24,10 +24,10 @@
     </div> -->
 
     <div class="social-media">
-        <img href="" src="/assets/github-icon.png" id="github" class="hvr-float">
-        <img src="/assets/linkedin-Icon.png" id="linkedIn" class="hvr-float">
-        <img src="/assets/email-icon2.png" id="email" class="hvr-float">
-        <img src="/assets/devpost-icon.png" id="devpost" class="hvr-float">
+        <img (click)="toGithub()" src="/assets/github-icon.png" id="github" class="hvr-float">
+        <img (click)="toLinkedIn()" src="/assets/linkedin-Icon.png" id="linkedIn" class="hvr-float">
+        <img routerLink="/contact" routerLinkActive="active" src="/assets/email-icon2.png" id="email" class="hvr-float">
+        <img (click)="toDevpost()" src="/assets/devpost-icon.png" id="devpost" class="hvr-float">
     </div>
 </div>
 
@@ -38,7 +38,7 @@
 <div class="intro-container hvr-grow">
  
     <div class="wrapper">
-        <div class="typing-demo">
+        <div class="typing-demo" style="font-family: 'Courier New'; font-weight: bold;">
           Welcome to my website.
         </div>
     </div>
@@ -48,20 +48,20 @@
 
     <div id="intro-text">
         <br><br>
-        I'm studying <b aria-label="With a minor in Game design" class="bolded cooltipz--bottom">computer science 
+        I'm studying <b aria-label="with a minor in Game Design" class="bolded cooltipz--bottom">computer science 
         </b> at Western University. As I'm coming into my third year, I'm looking for opportunities to learn and grow my
-        <b aria-label="In game and fullstack development" class="bolded cooltipz--bottom">skillset</b>.
+        <b aria-label="in game and full-stack development" class="bolded cooltipz--bottom">skillset</b>.
         In my free time, I love playing piano, games and 
         <b aria-label="I've been playing since I was 6!" class="bolded cooltipz--bottom">chess</b>.
         <br><br>
         I've lived in Ottawa my whole life but I love exploring. I've worked for 
-        <b aria-label="As an eCommerce Coordinator" class="bolded cooltipz--bottom">Mosiac North America</b>
+        <b aria-label="as an eCommerce Coordinator" class="bolded cooltipz--bottom">Mosiac North America</b>
         and currently the 
         <b aria-label="my current job!" class="bolded cooltipz--top"> CRA </b> through summer
         internships. The fields of tech I'm most interested in are AI and Game Design, but I love learning 
-        about basicaly anything from 
-        <b aria-label="Using MEAN!" class="bolded cooltipz--top"> fullstack development </b>
-        to <b aria-label="Like AR!" class="bolded cooltipz--top"> new technologies!</b>
+        about basically anything from 
+        <b aria-label="using MEAN!" class="bolded cooltipz--top"> fullstack development </b>
+        to <b aria-label="like AR!" class="bolded cooltipz--top"> new technologies!</b>
     </div>
 </div>
 
@@ -79,13 +79,13 @@
      <!-- [overflowCellsLimit]="1"
         [cellsToShow]="1" -->
 
-        <div class="carousel-cell">
+        <div (click)="toProj1()" routerLinkActive="active" class="carousel-cell">
             <img src="/assets/EcoBoost.png">
         </div>
-        <div class="carousel-cell">
+        <div (click)="toProj2()" routerLinkActive="active" class="carousel-cell">
             <img src="/assets/CO2.png">
         </div>
-        <div class="carousel-cell">
+        <div (click)="toProj3()" routerLinkActive="active" class="carousel-cell">
             <img src="/assets/COVID Visualizer.png">
         </div>
     </carousel>

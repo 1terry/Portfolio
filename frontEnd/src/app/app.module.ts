@@ -13,7 +13,9 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatInputModule } from "@angular/material/input"
+import { MatInputModule } from "@angular/material/input";
+import { ConstructionComponent } from './components/construction/construction.component';
+import { TestPageComponent } from './components/test-page/test-page.component'
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { MatInputModule } from "@angular/material/input"
     ResumeComponent,
     ContactComponent,
     PortfolioComponent,
+    ConstructionComponent,
+    TestPageComponent,
   ],
   imports: [
     BrowserModule,
