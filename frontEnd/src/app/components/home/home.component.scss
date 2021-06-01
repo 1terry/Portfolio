@@ -521,3 +521,45 @@
     height: 1700px;
   }
 }
+
+//Phone screens
+
+@media screen and (max-width: 480px) {
+  .right-flex {
+    width: 100%;
+  }
+  .intro-container {
+    width: 100%;
+    height: 150%;
+  }
+
+  .typing-demo {
+    font-size: 1.3em;
+    margin-left: 15px;
+  }
+
+  .profile-container h1 {
+    font-size: 2.5rem;
+    margin-top: 10px;
+  }
+
+  .text {
+    top: 38%;
+  }
+
+  .Iam {
+    font-size: 1.6em;
+  }
+
+  .background {
+    height: 1900px;
+  }
+
+  .profile-container {
+    width: 320px;
+  }
+
+  .social-media {
+    width: 95%;
+  }
+}

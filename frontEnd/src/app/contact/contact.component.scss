@@ -103,3 +103,13 @@ button:hover:enabled {
   color: white;
   background-color: black;
 }
+
+@media screen and (max-width: 480px) {
+  .contact-container {
+    width: 320px;
+  }
+
+  form.contact {
+    width: 300px;
+  }
+}
