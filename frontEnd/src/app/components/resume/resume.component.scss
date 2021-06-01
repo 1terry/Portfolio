@@ -258,3 +258,21 @@
   height: 100%;
   // width: 90%;
 }
+
+@media screen and (max-width: 1230px) {
+  .background {
+    height: 1400px;
+  }
+
+  .skills-container {
+    width: 80%;
+    margin: auto;
+    left: 10%;
+  }
+
+  .resume-container {
+    width: 80%;
+    top: 100%;
+    left: 10%;
+  }
+}

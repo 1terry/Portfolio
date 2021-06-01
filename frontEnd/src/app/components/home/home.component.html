@@ -1,94 +1,95 @@
 <!--Profile container-->
 <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
-<div class="profile-container hvr-grow">
-    <h1>Hi, I'm Terry</h1>
-    <div class="Iam">
-        <p>I am a</p>
-        <b>
-        <div class="innerIam" id="Iam-wrapper">
-            Student<br /> 
-            Programmer<br />
-            Canadian<br />
+<div class="flex-container">
+    <div class="profile-container hvr-grow">
+        <h1>Hi, I'm Terry</h1>
+        <div class="Iam">
+            <p>I am a</p>
+            <b>
+            <div class="innerIam" id="Iam-wrapper">
+                Student<br /> 
+                Programmer<br />
+                Canadian<br />
+            </div>
+            </b>
         </div>
-        </b>
-    </div>
-    <div class="prof-pic-container">
-        <img src="assets/prof pic.jpg" class="prof-pic">
-        <div class="overlay text"><br><br><br><br>I'm currently making the site 
-            responsive and always looking to improve my site. <Br>If you have any suggestions, please send me a message!
+        <div class="prof-pic-container">
+            <img src="assets/prof pic.jpg" class="prof-pic">
+            <div class="overlay text"><br>Hi There! <br> <br> If you have <br>any site suggestions,<br> please send me a message!
+            </div>
         </div>
-    </div>
 
-    <!-- <div class="profile-info">
-        I'm currently making the website responsive!
-    </div> -->
+        <!-- <div class="profile-info">
+            I'm currently making the website responsive!
+        </div> -->
 
-    <div class="social-media">
-        <img (click)="toGithub()" src='assets/github-icon.png' id="github" class="hvr-float">
-        <img (click)="toLinkedIn()" src='assets/linkedin-Icon.png' id="linkedIn" class="hvr-float">
-        <img routerLink="/contact" routerLinkActive="active" src='assets/email-icon2.png' id="email" class="hvr-float">
-        <img (click)="toDevpost()" src='assets/devpost-icon.png' id="devpost" class="hvr-float">
-    </div>
-</div>
-
-<!--Intro container-->
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cooltipz-css@1.6.7/cooltipz.css " />
-
-<div class="intro-container hvr-grow">
- 
-    <div class="wrapper">
-        <div class="typing-demo" style="font-family: 'Courier New'; font-weight: bold;">
-          Welcome to my website.
+        <div class="social-media">
+            <img (click)="toGithub()" src='assets/github-icon.png' id="github" class="hvr-float">
+            <img (click)="toLinkedIn()" src='assets/linkedin-Icon.png' id="linkedIn" class="hvr-float">
+            <img routerLink="/contact" routerLinkActive="active" src='assets/email-icon2.png' id="email" class="hvr-float">
+            <img (click)="toDevpost()" src='assets/devpost-icon.png' id="devpost" class="hvr-float">
         </div>
     </div>
 
-        <!-- <h1>I'm an incoming third-year student</h1> -->
- 
+    <!--Intro container-->
 
-    <div id="intro-text">
-        <br><br>
-        I'm studying <b aria-label="with a minor in Game Design" class="bolded cooltipz--bottom">computer science 
-        </b> at Western University. As I'm coming into my third year, I'm looking for opportunities to learn and grow my
-        <b aria-label="in game and full-stack development" class="bolded cooltipz--bottom">skillset</b>.
-        In my free time, I love playing piano, games and 
-        <b aria-label="I've been playing since I was 6!" class="bolded cooltipz--bottom">chess</b>.
-        <br><br>
-        I've lived in Ottawa my whole life but I love exploring. I've worked for 
-        <b aria-label="as an eCommerce Coordinator" class="bolded cooltipz--bottom">Mosiac North America</b>
-        and currently the 
-        <b aria-label="my current job!" class="bolded cooltipz--top"> CRA </b> through summer
-        internships. The fields of tech I'm most interested in are AI and Game Design, but I love learning 
-        about basically anything from 
-        <b aria-label="using MEAN!" class="bolded cooltipz--top"> fullstack development </b>
-        to <b aria-label="like AR!" class="bolded cooltipz--top"> new technologies!</b>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cooltipz-css@1.6.7/cooltipz.css " />
+    <div class="right-flex">
+    <div class="intro-container hvr-grow">
+    
+        <div class="wrapper">
+            <div class="typing-demo" style="font-family: 'Courier New'; font-weight: bold;">
+            Welcome to my website.
+            </div>
+        </div>
+
+            <!-- <h1>I'm an incoming third-year student</h1> -->
+    
+
+        <div id="intro-text">
+            <br><br>
+            I'm studying <b aria-label="with a minor in Game Design" class="bolded cooltipz--bottom">computer science 
+            </b> at Western University. As I'm coming into my third year, I'm looking for opportunities to learn and grow my
+            <b aria-label="in game and full-stack development" class="bolded cooltipz--bottom">skillset</b>.
+            In my free time, I love playing piano, games and <b aria-label="I've been playing since I was 6!" class="bolded cooltipz--bottom">chess</b>.
+            <br><br>
+            I've lived in Ottawa my whole life but I love exploring. I've worked for 
+            <b aria-label="as an eCommerce Coordinator" class="bolded cooltipz--top">Mosiac North America</b>
+            and currently the 
+            <b aria-label="in IT" class="bolded cooltipz--top"> CRA </b> through summer
+            internships. The fields of tech I'm most interested in are AI and Game Design, but I love learning 
+            about basically anything from fields like
+            <b aria-label="using MEAN!" class="bolded cooltipz--top"> full stack development </b>
+            to <b aria-label="like AR!" class="bolded cooltipz--top"> new technologies!</b>
+        </div>
     </div>
-</div>
 
-<!--Projects Container-->
+    <!--Projects Container-->
 
-<div class="projects-container hvr-grow">
-    <carousel 
-        [cellWidth]="'100%'"
-        [autoplay]="true"
-        [loop]="true"
-        [objectFit]="'contain'"
-        [height]="600"
-        [dots]="true"
-    >
-     <!-- [overflowCellsLimit]="1"
-        [cellsToShow]="1" -->
+    <div class="projects-container hvr-grow">
+        <carousel 
+            [cellWidth]="'100%'"
+            [autoplay]="true"
+            [loop]="true"
+            [objectFit]="'contain'"
+            [height]="600"
+            [dots]="true"
+        >
+        <!-- [overflowCellsLimit]="1"
+            [cellsToShow]="1" -->
 
-        <div (click)="toProj1()" routerLinkActive="active" class="carousel-cell">
-            <img src='assets/EcoBoost.png'>
-        </div>
-        <div (click)="toProj2()" routerLinkActive="active" class="carousel-cell">
-            <img src='assets/CO2.png'>
-        </div>
-        <div (click)="toProj3()" routerLinkActive="active" class="carousel-cell">
-            <img src='assets/COVID-Visualizer.png'>
-        </div>
-    </carousel>
+            <div (click)="toProj1()" routerLinkActive="active" class="carousel-cell">
+                <img src='assets/EcoBoost.png'>
+            </div>
+            <div (click)="toProj2()" routerLinkActive="active" class="carousel-cell">
+                <img src='assets/CO2.png'>
+            </div>
+            <div (click)="toProj3()" routerLinkActive="active" class="carousel-cell">
+                <img src='assets/COVID-Visualizer.png'>
+            </div>
+        </carousel>
+    </div>
+    </div>
 </div>
 <span class="background"></span>
 
