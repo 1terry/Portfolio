@@ -1,10 +1,17 @@
-<div class="wrapper">
-    
-</div>
-<div class="flex-cont">
-    <div class="container hvr-grow">
-        <h1>Does this text show up well?
-            <br> how bout this?
-        </h1>
+<div class="container">
+	<div class="section section--demo" id="examples">
+        		<!-- Image slider -->
+		<div class="demo">
+			<h3>Image slider</h3>
+			<carousel
+				[images]="imagesForSlider"
+				[objectFit]="'cover'"
+				[cellWidth]="'100%'"
+				[height]="300"
+				[autoplay]="true"
+				[dots]="true"
+				[loop]="true">
+			</carousel>
+		</div>
     </div>
 </div>

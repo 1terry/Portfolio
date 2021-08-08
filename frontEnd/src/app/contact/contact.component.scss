@@ -7,13 +7,13 @@
 .background {
   width: 100%;
   height: 100%;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgb(83, 119, 236) 0%,
-    rgb(156, 202, 253) 50%,
-    rgb(65, 215, 245) 96%
-  );
+  background-color: rgb(226, 216, 216);
+  // background: linear-gradient(
+  //   90deg,
+  //   rgb(83, 119, 236) 0%,
+  //   rgb(156, 202, 253) 50%,
+  //   rgb(65, 215, 245) 96%
+  // );
   position: absolute;
   top: 0px;
   z-index: -10;
@@ -27,9 +27,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(5px);
-  background: inherit;
+  // box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+  // backdrop-filter: blur(5px);
+  // background: inherit;
+  // background-color: whitesmoke;
   margin: -20px;
 }
 
@@ -37,13 +38,13 @@
   width: 450px;
   height: 500px;
   margin: auto;
-  background-color: whitesmoke;
+  // background-color: whitesmoke;
   background: inherit;
   right: 0;
   display: flex;
   border-radius: 15px;
   z-index: 1;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  // box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   overflow: hidden;
   justify-content: center;
   align-items: center;

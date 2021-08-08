@@ -8,18 +8,19 @@
 }
 
 .header-container {
-  width: 95%;
+  width: 100%;
   height: 50px;
-  // background-color: white;
-  margin-left: 2.5%;
-  margin-right: 2.5%;
-  margin-top: 1%;
-  border-radius: 15px;
-  position: absolute;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
-  background: inherit;
+  background-color: rgba(0, 0, 0, 0.699);
+  // margin-left: 2.5%;
+  // margin-right: 2.5%;
+  // margin-top: 1%;
+  // border-radius: 15px;
+  position: fixed;
+  box-shadow: 0 0 1rem 0 xrgba(0, 0, 0, 0.2);
+  // background: inherit;
   overflow: hidden;
-  z-index: 1;
+  z-index: 100;
+  display: flex;
 }
 
 .header-container::before {
@@ -30,26 +31,43 @@
   left: 0;
   right: 0;
   bottom: 0;
-  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(5px);
-  background: inherit;
+  // box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+  // backdrop-filter: blur(5px);
+  // background: inherit;
 }
 
 .header-left {
   position: absolute;
-  left: 2%;
+  left: 55px;
+  color: rgb(141, 141, 141);
+  top: 0px;
+  font-size: 1.5em;
+}
+
+.first:hover {
   color: white;
-  top: 22%;
+}
+
+.last {
+  color: white;
+}
+
+.last:hover {
+  color: rgb(255, 0, 0);
 }
 
 .header-right {
   position: absolute;
   right: 1%;
-  top: 22%;
+  top: 11px;
 }
 
 .header-right a {
   margin-left: 1.3em;
+}
+
+.header-right a:hover {
+  color: white;
 }
 
 .header-items {
@@ -60,11 +78,28 @@
 
 a {
   text-decoration: none;
-  color: rgb(153, 0, 204);
+  color: rgb(255, 0, 0);
 }
 
 a:hover {
-  color: rgb(87, 0, 116);
+  color: rgb(255, 0, 0);
+}
+
+@media screen and (max-width: 630px) {
+  .header-right {
+    right: 0px;
+    left: 30px;
+    top: 60px;
+    position: absolute;
+  }
+  .header-container {
+    border-radius: 0px;
+    width: 100%;
+    left: -2.5%;
+    height: 120px;
+    margin-bottom: 800px;
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -74,5 +109,19 @@ a:hover {
 
   .header-right a {
     margin-left: 0.5em;
+  }
+
+  .header-container {
+    border-radius: 0px;
+    width: 100%;
+    left: -2.5%;
+    top: -1%;
+  }
+
+  .header-right {
+    right: 0px;
+    left: 47.5px;
+    top: 60px;
+    position: absolute;
   }
 }

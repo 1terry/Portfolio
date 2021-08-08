@@ -12,4 +12,15 @@ export class TestPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  imagesForSlider = [
+    {path: '/assets/CO2.png'},
+    {path: '/assets/COVID-Visualizer.png'},
+    {path: '/assets/EcoBoost.png'},
+    {path: '/assets/COVID-Visualizer.png'},
+    {path: '/assets/EcoBoost.png'},
+];
+
+handleCarouselEvents(event:any) {
+  console.log(event);
+}
 }

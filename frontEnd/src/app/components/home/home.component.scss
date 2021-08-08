@@ -1,58 +1,69 @@
 * {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgb(83, 119, 236) 0%,
-    rgb(156, 202, 253) 50%,
-    rgb(65, 215, 245) 96%
-  );
-  background-attachment: fixed;
+  // background: rgb(226, 216, 216);
   font-family: century-gothic, sans-serif;
   font-weight: 400;
   font-style: normal;
-  scrollbar-width: thin;
-  scrollbar-color: blue orange;
 }
-
-// background-image: url("/assets/wavey-background.svg");
 
 //Display:grid
 
-.background {
+//Display flex
+
+//Put media tags in for alignmnent on mobile
+
+.flex-header {
+  height: 200px;
+  top: 55px;
   width: 100%;
-  height: 1000px;
-  position: absolute;
-  top: 0px;
-  z-index: -10;
-  background-attachment: fixed;
-  overflow: hidden;
+  margin-top: 55px;
+  margin-right: 2.5%;
+  margin-left: 55px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background: rgb(226, 216, 216);
+}
+
+.intro-header {
+  font-size: 4rem;
+  margin-top: -60px;
+  margin-bottom: 0px;
+  background: rgb(226, 216, 216);
+}
+
+.pc-header {
+  font-size: 0.5em;
+}
+
+.intro-flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  // height: 100%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  background: rgb(226, 216, 216);
 }
 
 .flex-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  height: 100%;
-  width: 100%;
   margin-top: 1%;
   padding-top: 80px;
-  padding-left: 2.5%;
-  padding-right: 2.5%;
-  padding-bottom: 0;
   margin: 0;
   list-style: none;
-  // background: inherit;
+  background: rgb(226, 216, 216);
 }
 
 .right-flex {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  height: 100%;
-  width: 950px;
+  width: 600px;
+  // height: 100%;
   flex-shrink: 1;
   margin-top: 1%;
-  padding-top: 80px;
   padding-left: 2.5%;
   padding-right: 2.5%;
   padding-bottom: 0;
@@ -67,48 +78,33 @@
 .profile-container {
   flex-flow: row wrap;
   justify-content: space-around;
-  width: 390px;
-  height: 600px;
-  margin-top: 1%;
+  width: 450px;
+  height: 500px;
   display: flex;
   border-radius: 15px;
+  margin-left: 20%;
   z-index: 1;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
-  background: rgba(235, 221, 221, 0.329);
-  // background: inherit;
+  // background-color: rgb(182, 182, 182);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
+  margin-top: -130px;
   overflow: hidden;
-  top: 80px;
   backdrop-filter: blur(5px);
 }
 
 .profile-container h1 {
   background: transparent;
-  top: 1%;
-  justify-content: flex-start;
-  font-size: 4em;
+  font-size: 2.5em;
+  margin-top: 20px;
+  font-weight: 1000;
 }
-
-// .profile-container:before {
-//   content: "";
-//   // position: absolute;
-//   z-index: -1;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
-//   backdrop-filter: blur(5px);
-//   background: inherit;
-//   margin: -20px;
-// }
 
 .prof-pic-container {
   border-radius: 50%;
   width: 250px;
   height: 250px;
-  margin-top: 45px;
+  margin-top: 105.5px;
   z-index: 3;
-  box-shadow: 0.3rem 0.3rem 0.5rem 0 rgba(0, 0, 0, 0.3);
+  // box-shadow: 0.3rem 0.3rem 0.5rem 0 rgba(0, 0, 0, 0.3);
 }
 
 //Overlay effect
@@ -117,6 +113,349 @@
   width: 250px;
   height: 250px;
   border-radius: 50%;
+}
+
+.overlay {
+  all: initial;
+  * {
+    all: unset;
+  }
+  font-family: century-gothic, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  // position: absolute;
+  background-color: rgb(179, 7, 179);
+  overflow: hidden;
+  width: 231px;
+  height: 230px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: 0.5s ease;
+  z-index: 4;
+  margin-top: 20px;
+}
+
+.prof-pic-container:hover .overlay {
+  opacity: 0.75;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  padding: 10px;
+  margin-top: 30.5px;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border-radius: 50%;
+}
+
+//End of overlay effect
+
+.social-media {
+  height: 80px;
+  width: 370px;
+  align-content: center;
+  border-radius: 15px;
+  opacity: 70%;
+  box-shadow: 0.3rem 0.3rem 0.5rem 0 rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: whitesmoke;
+}
+
+.profile-container img:hover {
+  cursor: pointer;
+}
+
+//Intro section
+
+.intro-container {
+  margin-top: -125px;
+  flex-grow: 1;
+  width: 775px;
+  height: 550px;
+  padding-right: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  border-radius: 15px;
+  z-index: 1;
+  // box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.intro-container h1 {
+  background: transparent;
+  z-index: 2;
+  // top: 4%;
+  // left: 2%;
+  font-size: 2.7em;
+  // margin-bottom: 50px;
+}
+
+#intro-text {
+  background: transparent;
+  z-index: 2;
+  font-size: 1.3rem;
+  margin: 0;
+  padding-top: 40px;
+  margin-left: 5%;
+}
+
+.dark-icon {
+  height: 60px;
+  width: auto;
+  border-radius: 50%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.dark-icon:hover {
+  cursor: pointer;
+}
+
+#intro-text a {
+  margin-left: 50px;
+  height: 60px;
+  background: rgb(39, 39, 39);
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 50px;
+  color: rgb(255, 0, 0);
+  font-weight: bolder;
+}
+
+#intro-text a:hover {
+  background: red;
+  color: white;
+  cursor: default;
+}
+
+.red {
+  color: red;
+}
+
+.red:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+
+#intro-text .bolded {
+  color: rgb(153, 0, 204);
+  background: inherit;
+}
+
+.projects-flex {
+  // border-radius: 50px;
+  // display: flex;
+  color: black;
+}
+
+.projects-flex p {
+  color: black;
+}
+
+.projects-container {
+  // width: 80%;
+  // height: 400px;
+  width: 775px;
+
+  background-color: transparent;
+
+  // border-radius: 25px;
+  // overflow: hidden;
+  // margin-left: 15%;
+  z-index: 3;
+  flex-grow: 1;
+  position: relative;
+  margin-bottom: 60px;
+  left: 2.5%;
+  right: 2.55%;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: auto;
+  margin-top: 30px;
+  padding-bottom: 50px;
+  // bottom: 40px;
+  display: flex;
+}
+
+.projects-carousel {
+  width: 600px;
+  margin-left: -360px;
+}
+
+.carousel-cell {
+  background: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: sans-serif;
+  border-radius: 15px;
+}
+
+//Typewritter effect
+
+.wrapper {
+  height: 30px;
+  position: absolute;
+  text-align: justify;
+  top: 4%;
+  left: 5%;
+  z-index: 3;
+  background: transparent;
+  margin-bottom: 30px;
+}
+
+.typing-demo {
+  width: 22ch;
+  animation: typing 2.5s steps(30), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2.5em;
+  background: transparent;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+// top: 25%;
+// left: 2%;
+// justify-content: center;
+
+//Tooltips
+@import url("https://cdn.jsdelivr.net/npm/cooltipz-css@1.6.7/cooltipz.css");
+
+/* Works on Chrome, Edge, and Safari */
+
+@media screen and (max-width: 1700px) {
+  .background {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 1430px) {
+  .background {
+    height: 1200px;
+    // width: 100%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .right-flex {
+    width: 100%;
+  }
+  .intro-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .typing-demo {
+    font-size: 2em;
+  }
+
+  .background {
+    height: 1700px;
+  }
+
+  .projects-container {
+    box-shadow: none;
+    background: transparent;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .profile-container h1 {
+    margin-top: 10px;
+  }
+
+  .profile-container {
+    margin-top: 10px;
+  }
+}
+
+//Phone screens
+
+@media screen and (max-width: 480px) {
+  .right-flex {
+    width: 100%;
+  }
+  .intro-container {
+    width: 100%;
+    height: 150%;
+  }
+
+  .typing-demo {
+    font-size: 1.3em;
+    margin-left: 15px;
+  }
+
+  .profile-container h1 {
+    font-size: 2.5rem;
+    margin-top: 10px;
+  }
+
+  .text {
+    top: 38%;
+  }
+
+  .Iam {
+    font-size: 1.6em;
+  }
+
+  .background {
+    height: 1900px;
+  }
+
+  .profile-container {
+    width: 320px;
+  }
+
+  .social-media {
+    width: 95%;
+  }
+}
+
+#github {
+  background: inherit;
+  background-color: transparent;
+}
+
+#email {
+  background: inherit;
+  background-color: transparent;
+}
+
+#linkedIn {
+  background: inherit;
+  background-color: transparent;
+}
+
+#devpost {
+  background: inherit;
+  background-color: transparent;
 }
 
 //I am animation
@@ -129,6 +468,7 @@
   z-index: 2;
   background: transparent;
   top: 2rem;
+  margin-top: -75px;
 }
 .Iam p {
   height: 50px;
@@ -263,150 +603,6 @@
       80% { top: -200px; } */
 }
 
-.overlay {
-  all: initial;
-  * {
-    all: unset;
-  }
-  font-family: century-gothic, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  // position: absolute;
-  background-color: rgb(179, 7, 179);
-  overflow: hidden;
-  width: 231px;
-  height: 230px;
-  border-radius: 50%;
-  opacity: 0;
-  transition: 0.5s ease;
-  z-index: 4;
-  margin-top: 20px;
-}
-
-.prof-pic-container:hover .overlay {
-  opacity: 0.75;
-}
-
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  padding: 10px;
-  margin-top: 61.6px;
-  top: 40%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-  border-radius: 50%;
-}
-
-//End of overlay effect
-
-.social-media {
-  height: 80px;
-  width: 370px;
-  align-content: center;
-  border-radius: 15px;
-  opacity: 70%;
-  box-shadow: 0.3rem 0.3rem 0.5rem 0 rgba(0, 0, 0, 0.4);
-  justify-content: center;
-  display: flex;
-  justify-content: space-around;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background: whitesmoke;
-}
-
-.profile-container img:hover {
-  cursor: pointer;
-}
-
-#github {
-  background: inherit;
-  background-color: transparent;
-}
-
-#email {
-  background: inherit;
-  background-color: transparent;
-}
-
-#linkedIn {
-  background: inherit;
-  background-color: transparent;
-}
-
-#devpost {
-  background: inherit;
-  background-color: transparent;
-}
-
-.intro-container {
-  margin-top: -60px;
-  flex-grow: 1;
-  width: 100%;
-  height: 350px;
-  background-color: transparent;
-  background: rgba(235, 221, 221, 0.329);
-  right: 0;
-  display: flex;
-  border-radius: 15px;
-  z-index: 1;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  align-items: center;
-}
-
-.intro-container h1 {
-  background: transparent;
-  z-index: 2;
-  top: 4%;
-  left: 2%;
-  font-size: 2.7em;
-}
-
-#intro-text {
-  background: transparent;
-  z-index: 2;
-  padding-left: 0.9em;
-  padding-right: 0.9em;
-  font-size: 1.2rem;
-  margin: 0;
-  padding-top: 0px;
-  margin-top: 0;
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
-
-#intro-text .bolded {
-  color: rgb(153, 0, 204);
-  background: inherit;
-}
-
-.projects-container {
-  width: 100%;
-  height: 400px;
-  display: flex;
-  border-radius: 15px;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
-  background: rgba(235, 221, 221, 0.329);
-  overflow: hidden;
-  z-index: 1;
-  align-items: center;
-  margin-top: 40px;
-  flex-grow: 1;
-  // margin-top: -500px;
-  // position: absolute;
-}
-
-.carousel-cell {
-  background-size: contain;
-  display: grid;
-  background: rgba(235, 221, 221, 0.329);
-}
-
 //Hover float
 
 .hvr-float {
@@ -446,120 +642,4 @@
 .hvr-grow:active {
   -webkit-transform: scale(1.035);
   transform: scale(1.035);
-}
-
-//Typewritter effect
-
-.wrapper {
-  height: 30px;
-  position: absolute;
-  text-align: justify;
-  top: 4%;
-  left: 2%;
-  z-index: 3;
-  background: transparent;
-}
-
-.typing-demo {
-  width: 22ch;
-  animation: typing 2.5s steps(30), blink 0.5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  //   font-family: monospace;
-  font-size: 2.5em;
-  background: transparent;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-
-// top: 25%;
-// left: 2%;
-// justify-content: center;
-
-//Tooltips
-@import url("https://cdn.jsdelivr.net/npm/cooltipz-css@1.6.7/cooltipz.css");
-
-/* Works on Chrome, Edge, and Safari */
-
-@media screen and (max-width: 1700px) {
-  .background {
-    height: 1000px;
-  }
-}
-
-@media screen and (max-width: 1430px) {
-  .background {
-    height: 1600px;
-  }
-}
-
-@media screen and (max-width: 850px) {
-  .right-flex {
-    width: 100%;
-  }
-  .intro-container {
-    width: 100%;
-    height: 100%;
-  }
-
-  .typing-demo {
-    font-size: 2em;
-  }
-
-  .background {
-    height: 1700px;
-  }
-}
-
-//Phone screens
-
-@media screen and (max-width: 480px) {
-  .right-flex {
-    width: 100%;
-  }
-  .intro-container {
-    width: 100%;
-    height: 150%;
-  }
-
-  .typing-demo {
-    font-size: 1.3em;
-    margin-left: 15px;
-  }
-
-  .profile-container h1 {
-    font-size: 2.5rem;
-    margin-top: 10px;
-  }
-
-  .text {
-    top: 38%;
-  }
-
-  .Iam {
-    font-size: 1.6em;
-  }
-
-  .background {
-    height: 1900px;
-  }
-
-  .profile-container {
-    width: 320px;
-  }
-
-  .social-media {
-    width: 95%;
-  }
 }

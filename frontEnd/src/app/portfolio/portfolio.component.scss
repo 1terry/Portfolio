@@ -1,11 +1,11 @@
 * {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgb(83, 119, 236) 0%,
-    rgb(156, 202, 253) 50%,
-    rgb(65, 215, 245) 96%
-  );
+  background-color: rgb(226, 216, 216);
+  // background: linear-gradient(
+  //   90deg,
+  //   rgb(83, 119, 236) 0%,
+  //   rgb(156, 202, 253) 50%,
+  //   rgb(65, 215, 245) 96%
+  // );
   background-attachment: fixed;
   background-size: cover;
   font-family: century-gothic, sans-serif;
@@ -76,12 +76,12 @@
   height: 450px;
   margin-top: 30px;
   //   line-height: 450px;
-  color: white;
+  color: rgb(0, 0, 0);
   margin-left: 15px;
-  border-radius: 15px;
+  // border-radius: 15px;
   cursor: pointer;
   backdrop-filter: blur(5px);
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.4);
+  // box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.4);
 }
 
 //   background-size: cover;
@@ -111,4 +111,10 @@ li {
   font-weight: bold;
   font-size: 1.5em;
   text-align: center;
+}
+
+@media screen and (max-width: 630px) {
+  .con1{
+    margin-top:50px;
+  }
 }
