@@ -26,7 +26,7 @@ https://www.npmjs.com/package/angular-dark-mode-->
                 <br><br>
                 I'm studying <b aria-label="with a minor in Game Design" class="bolded cooltipz--bottom">computer science 
                 </b> at Western University. As I'm coming into my third year, I'm looking for opportunities to learn and grow my
-                <b aria-label="in game and full-stack development" class="bolded cooltipz--bottom">skillset</b>.
+                <b aria-label="in full-stack development" class="bolded cooltipz--bottom">skillset</b>.
                 In my free time, I love playing piano, games and <b aria-label="I've been playing since I was 6!" class="bolded cooltipz--bottom">chess</b>.
                 <br><br>
                 I've lived in Ottawa my whole life but I love exploring. I've worked for 
@@ -38,10 +38,12 @@ https://www.npmjs.com/package/angular-dark-mode-->
                 <b aria-label="using MEAN!" class="bolded cooltipz--top"> full stack development </b>
                 to <b aria-label="like AR!" class="bolded cooltipz--top"> new technologies!</b>
                 <br><br>
-                <img class="dark-icon" src="/assets/dark_mode.svg">
                 <!--Change this to a play button? and then click to play background colour changing-->
-                <a>change background  </a>
-                <a>view projects</a>
+                <div class="interactive-buttons">
+                    <img class="dark-icon" src="/assets/dark_mode.svg">
+                    <a id="background-change">change background  </a>
+                    <a id="scroll-projects">view projects</a>
+                </div>
                 <!--Add stylized words of different skills/interests-->
                 <!--Section the site?-->
 
@@ -81,81 +83,50 @@ https://www.npmjs.com/package/angular-dark-mode-->
 
    
 </div>
-<!--<div class="projects-flex">
--->
-<div class="projects-container hvr-grow">
-    <div class="projects-carousel">
-    <carousel 
-                [images]="imagesForSlider"
-				[objectFit]="'cover'"
-				[cellWidth]="'100%'"
-				[height]="300"
-				[autoplay]="true"
-				[dots]="true"
-				[loop]="true"
-                arrowsTheme="dark"
-                [autoplayInterval]="2500"
-               >   
+<div class="projects-flex">
+    <div class="projects-container hvr-grow">
+        <div class="divider">
+            <!--Insert a divider here maybe-->
+        </div>
+        <div class="projects-carousel">
+        <carousel 
+                    [images]="imagesForSlider"
+                    [objectFit]="'cover'"
+                    [cellWidth]="'100%'"
+                    [height]="300"
+                    [autoplay]="true"
+                    [dots]="true"
+                    [loop]="true"
+                    arrowsTheme="dark"
+                    [autoplayInterval]="5000"
+                >   
+        
+        </carousel>
+        </div>
+        <div class="featured">
     
-    <!--    [cellWidth]="450"
-        [autoplay]="true"
-        [loop]="true"
-        [objectFit]="'cover'"
-        [height]="400"
-        [dots]="true"
-        [borderRadius]="10"
-        arrowsTheme="dark"-->
-    <!-- [overflowCellsLimit]="1"
-        [cellsToShow]="1" -->
+        <h1>Featured projects</h1>
+            <p>
+            <br> EcoBoost
+            <br> COVID-Visualizer
+            <br> CO2 Emissions Calculator
+            <br> Sign Language AI
+            <br><br> <a routerLink="/testPage" routerLinkActive="active">Test page</a> <br> <br>
 
-        <!-- <div (click)="toProj1()" routerLinkActive="active" class="carousel-cell">
-            <img src='assets/EcoBoost.png'>
+        </p>
         </div>
-        <div (click)="toProj2()" routerLinkActive="active" class="carousel-cell">
-            <img src='assets/CO2.png'>
-        </div>
-        <div (click)="toProj3()" routerLinkActive="active" class="carousel-cell">
-            <img src='assets/COVID-Visualizer.png'>
-        </div>
-        <div (click)="toProj1()" routerLinkActive="active" class="carousel-cell">
-            <img src='assets/EcoBoost.png'>
-        </div>
-        <div (click)="toProj2()" routerLinkActive="active" class="carousel-cell">
-            <img src='assets/CO2.png'>
-        </div> -->
-    </carousel>
+
     </div>
-    <div class="featured">
-    
-    <h1>Featured projects</h1>
-        <p>
-        <br> EcoBoost
-        <br> COVID-Visualizer
-        <br> CO2 Emissions Calculator
-        <br> Sign Language AI
-        <br><br> <a routerLink="/testPage" routerLinkActive="active">Test page</a> <br> <br>
-
-    </p>
+    <div class="skills-flex">
+        <div class="skills-interests">
+            <h1><div class="current-skills"> Familiar Technologies </div>
+            <div class="interests"> Fields of Interest</div></h1>
+        </div>
     </div>
-
-    <h1> What I know</h1>
-    <h1> What I want to learn more about</h1>
-
 </div>
-
 <span class="background"></span>
 <router-outlet></router-outlet>
-<!-- <img src="assets/sa_pixar_virtualbg_coco_16x9_9ccd7110.jpeg" class="background"> -->
 
-  <!-- [objectFit]="'cover'" 
-     [cellWidth]="'100%'"
-    [height]="600"
-    [arrowsOutside]="true"
-    [autoplay]="true"
-    [dots]="true"
-    [loop]="true"
-    [arrowsTheme]="'dark'"
-    [arrows]="true"
-    -->
+
 
 <!--Night Mode by Fiki Ahmadi from the Noun Project-->
