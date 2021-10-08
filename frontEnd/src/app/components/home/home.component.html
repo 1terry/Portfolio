@@ -14,7 +14,7 @@ https://www.npmjs.com/package/angular-dark-mode-->
     </div>
 
     <div class="intro-flex-container">
-        <div class="intro-container hvr-grow">
+        <div class="intro-container ">
         
             <div class="wrapper">
                 <div class="typing-demo">
@@ -40,7 +40,7 @@ https://www.npmjs.com/package/angular-dark-mode-->
                 <br><br>
                 <!--Change this to a play button? and then click to play background colour changing-->
                 <div class="interactive-buttons">
-                    <img class="dark-icon" src="/assets/dark_mode.svg">
+                    <img class="dark-icon hvr-grow" src="/assets/dark_mode.svg">
                     <a id="background-change">change background  </a>
                     <a id="scroll-projects">view projects</a>
                 </div>
@@ -52,7 +52,7 @@ https://www.npmjs.com/package/angular-dark-mode-->
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cooltipz-css@1.6.7/cooltipz.css " />
         <div class="right-flex">
-            <div class="profile-container hvr-grow">  
+            <div class="profile-container ">  
                 <div class="Iam">
                     <p>I am a</p>
                     <b>
@@ -84,16 +84,19 @@ https://www.npmjs.com/package/angular-dark-mode-->
    
 </div>
 <div class="projects-flex">
-    <div class="projects-container hvr-grow">
+
+    <div class="projects-container">
+        
         <div class="divider">
-            <!--Insert a divider here maybe-->
+            <!--Used for positioning-->
         </div>
+        <h1 class="projects-header">Projects 🚀</h1>
         <div class="projects-carousel">
         <carousel 
                     [images]="imagesForSlider"
                     [objectFit]="'cover'"
                     [cellWidth]="'100%'"
-                    [height]="300"
+                    [height]="450"
                     [autoplay]="true"
                     [dots]="true"
                     [loop]="true"
@@ -103,9 +106,9 @@ https://www.npmjs.com/package/angular-dark-mode-->
         
         </carousel>
         </div>
-        <div class="featured">
-    
-        <h1>Featured projects</h1>
+        
+        <!-- <div class="featured">
+        <h1>Work Experience</h1>
             <p>
             <br> EcoBoost
             <br> COVID-Visualizer
@@ -114,17 +117,78 @@ https://www.npmjs.com/package/angular-dark-mode-->
             <br><br> <a routerLink="/testPage" routerLinkActive="active">Test page</a> <br> <br>
 
         </p>
-        </div>
+        </div> -->
 
-    </div>
+    <!-- </div>
     <div class="skills-flex">
         <div class="skills-interests">
             <h1><div class="current-skills"> Familiar Technologies </div>
             <div class="interests"> Fields of Interest</div></h1>
+            <div class="first-year">
+                <p>
+                    Intro to Python (CS 2016) <br>
+                    Intro to Object-Oriented Programming (CS 1027) <br>
+                </p>
+            </div>
         </div>
-    </div>
+    </div> -->
+
+    
+    <!-- <ul class="tilesWrap">
+        <li class="hvr-grow">
+            <h2>EcoBoost</h2>
+            <h3>Title 1</h3>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting   
+                industry. Lorem Ipsum has been the industry's standard dummy text ever 
+                since the 1500s.
+            </p>
+            <button>Read more</button>
+        </li>
+        <li class="hvr-grow">
+            <h2>COVID-19 Visualizer</h2>
+            <h3>Title 2</h3>
+            <p>
+                When an unknown printer took a galley of type and scrambled it to make 
+                a type specimen book. It has survived not only five centuries.
+            </p>
+            <button>Read more</button>
+        </li>
+        <li class="hvr-grow">
+            <h2>CO2 Calculator</h2>
+            <h3>Title 3</h3>
+            <p>
+                But also the leap into electronic typesetting, remaining essentially 
+                unchanged. It was popularised in the 1960s.
+            </p>
+            <button>Read more</button>
+        </li>
+        <li class="hvr-grow">
+            <h2>AI Interpreter</h2>
+            <h3>Title 4</h3>
+            <p>
+                With the release of Letraset sheets containing Lorem Ipsum passages,  
+                and more recently with desktop publishing software like Aldus PageMaker 
+                including versions of Lorem Ipsum.
+            </p>
+            <button>Read more</button>
+        </li>
+        <li class="hvr-grow">
+            <h2>World Bank Visualizer</h2>
+            <h3>Title 5</h3>
+            <p>
+                pog wh6y this short aaaaaaaaaaaaaaaa
+            </p>
+            <button>Read more</button>
+        </li>
+    </ul> -->
+
+<!--https://freefrontend.com/css-timelines/-->
+
 </div>
 <span class="background"></span>
+<span class="background2"></span>
+<span class="background3"></span>
 <router-outlet></router-outlet>
 
 
