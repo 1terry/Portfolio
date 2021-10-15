@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { TimelineElement } from '../horizontal-timeline/timeline-element';
 import { HomeComponent } from './home.component';
+import { Component } from '@angular/core';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;

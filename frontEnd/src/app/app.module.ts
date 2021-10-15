@@ -16,6 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from "@angular/material/input";
 import { ConstructionComponent } from './components/construction/construction.component';
 import { TestPageComponent } from './components/test-page/test-page.component'
+import { HorizontalTimelineComponent } from './components/horizontal-timeline/horizontal-timeline.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { TestPageComponent } from './components/test-page/test-page.component'
     PortfolioComponent,
     ConstructionComponent,
     TestPageComponent,
+    HorizontalTimelineComponent
   ],
   imports: [
     BrowserModule,
