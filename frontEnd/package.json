@@ -24,6 +24,7 @@
     "@angular/platform-browser-dynamic": "~11.2.12",
     "@angular/router": "~11.2.12",
     "@fortawesome/fontawesome-free": "^5.15.3",
+    "@fullpage/angular-fullpage": "0.0.16",
     "@ng-bootstrap/ng-bootstrap": "^9.1.1",
     "@types/chart.js": "^2.9.32",
     "angular-bootstrap-md": "^11.1.0",

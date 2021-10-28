@@ -17,6 +17,7 @@ import { MatInputModule } from "@angular/material/input";
 import { ConstructionComponent } from './components/construction/construction.component';
 import { TestPageComponent } from './components/test-page/test-page.component'
 import { HorizontalTimelineComponent } from './components/horizontal-timeline/horizontal-timeline.component';
+import { AngularFullpageModule } from '@fullpage/angular-fullpage';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { HorizontalTimelineComponent } from './components/horizontal-timeline/ho
     ReactiveFormsModule,
     NoopAnimationsModule,
     BrowserAnimationsModule,
-    MatInputModule
+    MatInputModule,
+    AngularFullpageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

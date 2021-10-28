@@ -10,15 +10,10 @@
 .header-container {
   width: 100%;
   height: 50px;
-  background-color: rgba(0, 0, 0, 0.699);
-  // margin-left: 2.5%;
-  // margin-right: 2.5%;
-  // margin-top: 1%;
-  // border-radius: 15px;
-  position: fixed;
+  margin-bottom: 300px;
+  background-color: rgba(87, 87, 87, 0.699);
+  position: absolute;
   box-shadow: 0 0 1rem 0 xrgba(0, 0, 0, 0.2);
-  // background: inherit;
-  overflow: hidden;
   z-index: 100;
   display: flex;
 }
@@ -115,7 +110,6 @@ a:hover {
     border-radius: 0px;
     width: 100%;
     left: -2.5%;
-    top: -1%;
   }
 
   .header-right {

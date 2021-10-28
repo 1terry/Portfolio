@@ -7,190 +7,113 @@
 <!--Dark mode
 https://www.npmjs.com/package/angular-dark-mode-->
 <!--https://medium.com/@haxzie/dark-and-light-theme-switcher-using-css-variables-and-pure-javascript-zocada-dd0059d72fa2-->
+<!-- <app-header></app-header> -->
 
-<div class="flex-container">
-    <div class="flex-header">
-        <h1 class="intro-header">Hi, I'm <a class="red">Terry</a> 🍁</h1>
+<div fullpage id="fullpage" [options]="config" (ref)="getRef($event)">
+    <!--
+
+        Section 1 of website
+
+    -->
+    <div class="section">
+    <div class="flex-container sec1">
+        <div class="flex-header">
+            <h1 class="intro-header">Hi, I'm <a class="red">Terry</a> 🍁</h1>
+        </div>
+
+        <div class="intro-flex-container">
+            <div class="intro-container ">
+            
+                <div class="wrapper">
+                    <div class="typing-demo">
+                    Welcome to my website.
+                    </div>
+                </div>        
+
+                <!--Intro-->
+                <div id="intro-text">
+
+                    <br><br>
+                    I'm studying <b aria-label="with a minor in Game Design" class="bolded cooltipz--bottom">computer science 
+                    </b> at Western University. As I'm coming into my third year, I'm looking for opportunities to learn and grow my
+                    <b aria-label="in full-stack development" class="bolded cooltipz--bottom">skillset</b>.
+                    In my free time, I love playing piano, games and <b aria-label="I've been playing since I was 6!" class="bolded cooltipz--bottom">chess</b>.
+                    <br><br>
+                    I've lived in Ottawa my whole life but I love exploring. I've worked for 
+                    <b aria-label="as an eCommerce Coordinator" class="bolded cooltipz--top">Mosiac North America</b>
+                    and currently the 
+                    <b aria-label="in IT" class="bolded cooltipz--top"> CRA </b> through summer
+                    internships. The fields of tech I'm most interested in are AI and Game Design, but I love learning 
+                    about basically anything from fields like
+                    <b aria-label="using MEAN!" class="bolded cooltipz--top"> full stack development </b>
+                    to <b aria-label="like AR!" class="bolded cooltipz--top"> new technologies!</b>
+                    <br><br>
+                    <!--Change this to a play button? and then click to play background colour changing-->
+                    <div class="interactive-buttons">
+                        <img class="dark-icon hvr-grow" src="/assets/dark_mode.svg">
+                        <a id="background-change">change background  </a>
+                        <a id="scroll-projects">view projects</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Profile section-->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cooltipz-css@1.6.7/cooltipz.css " />
+            <div class="right-flex">
+                <div class="profile-container">  
+                    <div class="Iam">
+                        <p>I am a</p>
+                        <b>
+                        <div class="innerIam" id="Iam-wrapper">
+                            Student 👨‍🎓<br /> 
+                            Coder 🖥️<br />
+                            Pianist 🎹<br />
+                        </div>
+                        </b>
+                    </div>
+                    <div class="prof-pic-container">
+                        <img src="assets/prof pic.jpg" class="prof-pic">
+                        <div class="overlay text"><br>Hi There! <br> <br> If you have <br>any site suggestions,<br> please send me a message!
+                        </div>
+                    </div>
+            
+                    <div class="social-media">
+                        <img (click)="toGithub()" src='assets/github-icon.png' id="github" class="hvr-float">
+                        <img (click)="toLinkedIn()" src='assets/linkedin-Icon.png' id="linkedIn" class="hvr-float">
+                        <img routerLink="/contact" routerLinkActive="active" src='assets/email-icon2.png' id="email" class="hvr-float">
+                        <img (click)="toDevpost()" src='assets/devpost-icon.png' id="devpost" class="hvr-float">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--
+
+        Section 2 of website -> Projects
+
+    -->
+
+    <div class="section">
+    <div class="projects-flex sec2">
+        <!-- <br><br> <a routerLink="/testPage" routerLinkActive="active">Test page</a> <br> <br> -->
+        <div class="projects-container">
+            
+            <div class="divider">
+                <!--Used for positioning-->
+            </div>
+            <h1 class="projects-header">Projects 🚀</h1>
+
+        </div>
     </div>
 
-    <div class="intro-flex-container">
-        <div class="intro-container ">
-        
-            <div class="wrapper">
-                <div class="typing-demo">
-                Welcome to my website.
-                </div>
-            </div>        
-
-            <div id="intro-text">
-                <br><br>
-                I'm studying <b aria-label="with a minor in Game Design" class="bolded cooltipz--bottom">computer science 
-                </b> at Western University. As I'm coming into my third year, I'm looking for opportunities to learn and grow my
-                <b aria-label="in full-stack development" class="bolded cooltipz--bottom">skillset</b>.
-                In my free time, I love playing piano, games and <b aria-label="I've been playing since I was 6!" class="bolded cooltipz--bottom">chess</b>.
-                <br><br>
-                I've lived in Ottawa my whole life but I love exploring. I've worked for 
-                <b aria-label="as an eCommerce Coordinator" class="bolded cooltipz--top">Mosiac North America</b>
-                and currently the 
-                <b aria-label="in IT" class="bolded cooltipz--top"> CRA </b> through summer
-                internships. The fields of tech I'm most interested in are AI and Game Design, but I love learning 
-                about basically anything from fields like
-                <b aria-label="using MEAN!" class="bolded cooltipz--top"> full stack development </b>
-                to <b aria-label="like AR!" class="bolded cooltipz--top"> new technologies!</b>
-                <br><br>
-                <!--Change this to a play button? and then click to play background colour changing-->
-                <div class="interactive-buttons">
-                    <img class="dark-icon hvr-grow" src="/assets/dark_mode.svg">
-                    <a id="background-change">change background  </a>
-                    <a id="scroll-projects">view projects</a>
-                </div>
-                <!--Add stylized words of different skills/interests-->
-                <!--Section the site?-->
-
-            </div>
-        </div>
-
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cooltipz-css@1.6.7/cooltipz.css " />
-        <div class="right-flex">
-            <div class="profile-container ">  
-                <div class="Iam">
-                    <p>I am a</p>
-                    <b>
-                    <div class="innerIam" id="Iam-wrapper">
-                        Student 👨‍🎓<br /> 
-                        Coder 🖥️<br />
-                        Pianist 🎹<br />
-                    </div>
-                    </b>
-                </div>
-                <div class="prof-pic-container">
-                    <img src="assets/prof pic.jpg" class="prof-pic">
-                    <div class="overlay text"><br>Hi There! <br> <br> If you have <br>any site suggestions,<br> please send me a message!
-                    </div>
-                </div>
-        
-                <div class="social-media">
-                    <img (click)="toGithub()" src='assets/github-icon.png' id="github" class="hvr-float">
-                    <img (click)="toLinkedIn()" src='assets/linkedin-Icon.png' id="linkedIn" class="hvr-float">
-                    <img routerLink="/contact" routerLinkActive="active" src='assets/email-icon2.png' id="email" class="hvr-float">
-                    <img (click)="toDevpost()" src='assets/devpost-icon.png' id="devpost" class="hvr-float">
-                </div>
-            </div>
-        </div>
+    <span class="background"></span>
+    <span class="background2"></span>
+    <span class="background3"></span>
+    <!-- <router-outlet></router-outlet> -->
     </div>
-
-        <!--Projects Container-->
-
-   
 </div>
-<div class="projects-flex">
-    <!-- <br><br> <a routerLink="/testPage" routerLinkActive="active">Test page</a> <br> <br> -->
-    <div class="projects-container">
-        
-        <div class="divider">
-            <!--Used for positioning-->
-        </div>
-        <h1 class="projects-header">Projects 🚀</h1>
-        <div class="projects-carousel">
-        <carousel 
-                    [images]="imagesForSlider"
-                    [objectFit]="'cover'"
-                    [cellWidth]="'100%'"
-                    [height]="450"
-                    [autoplay]="true"
-                    [dots]="true"
-                    [loop]="true"
-                    arrowsTheme="dark"
-                    [autoplayInterval]="5000"
-                >   
-        
-        </carousel>
-        </div>
-    
-        <!-- <div class="featured">
-        <h1>Work Experience</h1>
-            <p>
-            <br> EcoBoost
-            <br> COVID-Visualizer
-            <br> CO2 Emissions Calculator
-            <br> Sign Language AI
-            <br><br> <a routerLink="/testPage" routerLinkActive="active">Test page</a> <br> <br>
-
-        </p>
-        </div> -->
-
-    <!-- </div>
-    <div class="skills-flex">
-        <div class="skills-interests">
-            <h1><div class="current-skills"> Familiar Technologies </div>
-            <div class="interests"> Fields of Interest</div></h1>
-            <div class="first-year">
-                <p>
-                    Intro to Python (CS 2016) <br>
-                    Intro to Object-Oriented Programming (CS 1027) <br>
-                </p>
-            </div>
-        </div>
-    </div> -->
-
-    
-    <!-- <ul class="tilesWrap">
-        <li class="hvr-grow">
-            <h2>EcoBoost</h2>
-            <h3>Title 1</h3>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting   
-                industry. Lorem Ipsum has been the industry's standard dummy text ever 
-                since the 1500s.
-            </p>
-            <button>Read more</button>
-        </li>
-        <li class="hvr-grow">
-            <h2>COVID-19 Visualizer</h2>
-            <h3>Title 2</h3>
-            <p>
-                When an unknown printer took a galley of type and scrambled it to make 
-                a type specimen book. It has survived not only five centuries.
-            </p>
-            <button>Read more</button>
-        </li>
-        <li class="hvr-grow">
-            <h2>CO2 Calculator</h2>
-            <h3>Title 3</h3>
-            <p>
-                But also the leap into electronic typesetting, remaining essentially 
-                unchanged. It was popularised in the 1960s.
-            </p>
-            <button>Read more</button>
-        </li>
-        <li class="hvr-grow">
-            <h2>AI Interpreter</h2>
-            <h3>Title 4</h3>
-            <p>
-                With the release of Letraset sheets containing Lorem Ipsum passages,  
-                and more recently with desktop publishing software like Aldus PageMaker 
-                including versions of Lorem Ipsum.
-            </p>
-            <button>Read more</button>
-        </li>
-        <li class="hvr-grow">
-            <h2>World Bank Visualizer</h2>
-            <h3>Title 5</h3>
-            <p>
-                pog wh6y this short aaaaaaaaaaaaaaaa
-            </p>
-            <button>Read more</button>
-        </li>
-    </ul> -->
-
-<!--https://freefrontend.com/css-timelines/-->
-
-</div>
-
-<span class="background"></span>
-<span class="background2"></span>
-<span class="background3"></span>
-<router-outlet></router-outlet>
 
 
 

@@ -3,6 +3,7 @@
   font-family: century-gothic, sans-serif;
   font-weight: 400;
   font-style: normal;
+  // margin-top: -20px;
 }
 
 //Display:grid
@@ -10,6 +11,16 @@
 //Display flex
 
 //Put media tags in for alignmnent on mobile
+
+.sec1 {
+  top: -15px;
+  position: absolute;
+}
+
+.sec2 {
+  top: 15px;
+  position: absolute;
+}
 
 .flex-header {
   height: 200px;
@@ -49,7 +60,6 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  margin-top: 1%;
   padding-top: 80px;
   margin: 0;
   list-style: none;
@@ -91,7 +101,7 @@
   backdrop-filter: blur(5px);
 }
 
-.profile-container:hover{
+.profile-container:hover {
   box-shadow: 0 0 1rem 0 rgba(172, 35, 214, 0.7);
 }
 
@@ -269,8 +279,8 @@
   // display: flex;
   // position: absolute;
   height: 900px;
-  margin-top: -30px;
-  width: 99.1vw;
+  margin-top: -15px;
+  width: 100vw;
   background: rgb(209, 203, 203);
 }
 
@@ -299,7 +309,7 @@
   display: flex;
 }
 
-.projects-header{
+.projects-header {
   padding-bottom: 100px;
   width: 100vw;
   text-align: center;
@@ -315,7 +325,7 @@
   // float: left;
 }
 
-.featured{
+.featured {
   text-align: left;
   float: right;
   padding-right: 250px;
@@ -368,7 +378,8 @@ Skills section
   text-align: justify;
   transform: perspective(1px) translateZ(0);
   top: 225px;
-  left: 300px;
+  left: 80px;
+  margin-left: 2.5%;
   z-index: 3;
   background: transparent;
   margin-bottom: 30px;
@@ -703,97 +714,96 @@ Skills section
 //Copy pasta
 
 .tilesWrap {
-	padding: 0;
-	margin: 50px auto;
-	list-style: none;
-	text-align: center;
+  padding: 0;
+  margin: 50px auto;
+  list-style: none;
+  text-align: center;
   border-width: 20px;
- }
+}
 .tilesWrap li {
-	display: inline-block;
-	width: 20%;
-	min-width: 200px;
-	max-width: 230px;
-	padding: 80px 20px 40px;
-	position: relative;
-	vertical-align: top;
-	margin: 10px;
-	font-family: 'helvetica', san-serif;
-	min-height: 25vh;
-	// background: #554d4d;
+  display: inline-block;
+  width: 20%;
+  min-width: 200px;
+  max-width: 230px;
+  padding: 80px 20px 40px;
+  position: relative;
+  vertical-align: top;
+  margin: 10px;
+  font-family: "helvetica", san-serif;
+  min-height: 25vh;
+  // background: #554d4d;
   background: rgb(177, 166, 166);
-	// border: 1px solid #252727;
-	text-align: left;
+  // border: 1px solid #252727;
+  text-align: left;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
   border-radius: 3%;
 }
 .tilesWrap li h2 {
-	font-size: 30px;
-	margin: 0;
-	position: absolute;
-	opacity: 0.5;
-	// top: 30px;
+  font-size: 30px;
+  margin: 0;
+  position: absolute;
+  opacity: 0.5;
+  // top: 30px;
   top: 0px;
   z-index: 0;
-	// right: 10px;
-	transition: all 0.3s ease-in-out;
+  // right: 10px;
+  transition: all 0.3s ease-in-out;
   color: #ee184d;
 }
 
 .tilesWrap li h3 {
-	font-size: 20px;
-  
-	color: #e5aeff;
-	margin-bottom: 5px;
+  font-size: 20px;
+
+  color: #e5aeff;
+  margin-bottom: 5px;
 }
 .tilesWrap li p {
-	font-size: 16px;
-	line-height: 18px;
-	color: #ffffff;
-	margin-top: 5px;
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  margin-top: 5px;
   z-index: 1;
 }
 .tilesWrap li button {
-	background: transparent;
-	border: 1px solid #fffbfb;
-	padding: 10px 20px;
-	color: #b7b7b7;
-	border-radius: 3px;
-	position: relative;
-	transition: all 0.3s ease-in-out;
-	transform: translateY(-40px);
-	opacity: 0;
-	cursor: pointer;
-	overflow: hidden;
+  background: transparent;
+  border: 1px solid #fffbfb;
+  padding: 10px 20px;
+  color: #b7b7b7;
+  border-radius: 3px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-40px);
+  opacity: 0;
+  cursor: pointer;
+  overflow: hidden;
 }
 .tilesWrap li button:before {
-	content: '';
-	position: absolute;
-	height: 100%;
-	width: 120%;
-	background: #b7b7b7;
-	top: 0;
-	opacity: 0;
-	left: -140px;
-	border-radius: 0 20px 20px 0;
-	z-index: -1;
-	transition: all 0.3s ease-in-out;
-	
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 120%;
+  background: #b7b7b7;
+  top: 0;
+  opacity: 0;
+  left: -140px;
+  border-radius: 0 20px 20px 0;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
 }
 .tilesWrap li:hover button {
-	transform: translateY(5px);
-	opacity: 1;
+  transform: translateY(5px);
+  opacity: 1;
 }
 .tilesWrap li button:hover {
-	color: #262a2b;
+  color: #262a2b;
 }
 .tilesWrap li button:hover:before {
-	left: 0;
-	opacity: 1;
+  left: 0;
+  opacity: 1;
 }
 .tilesWrap li:hover h2 {
-	top: 0px;
-	// opacity: 0.6;
+  top: 0px;
+  // opacity: 0.6;
   opacity: 1;
   z-index: 10;
 }
@@ -805,411 +815,22 @@ Skills section
 }
 
 .tilesWrap li:before {
-	content: '';
-	position: absolute;
-	top: -2px;
-	left: -2px;
-	right: -2px;
-	bottom: -2px;
-	z-index: -1;
-	// background: #fff;
-	transform: skew(2deg, 2deg);
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  // background: #fff;
+  transform: skew(2deg, 2deg);
 }
 .tilesWrap li:after {
-	content: '';
-	position: absolute;
-	width: 40%;
-	height: 100%;
-	left: 0;
-	top: 0;
-	// background: rgba(255, 255, 255, 0.02);
-}
-
-$font: 'Nunito', sans-serif;
-
-$scheme-base: #a6cde2;
-$color-bg: $scheme-base;
-$color-mid: darken($scheme-base, 14);
-$color-dark: darken($scheme-base, 40);
-
-$steps: 5; // Change in html
-$step-width: 100% / $steps;
-$step-point-width: 30px;
-$step-point-height: $step-point-width;
-$step-point-color: $color-mid;
-$step-point-bg: white;
-$step-font-size: 14px;
-$step-padding: 10px;
-$step-gap: 50px;
-
-$tab-spacing: 80px;
-
-$form-width: 700;
-
-$counter-spacing: 3px;
-$counter-font-size: 12px;
-
-$bar-transition-speed: 800ms;
-$bar-bg: repeating-linear-gradient(
-  45deg,
-  #1ea4ec,
-  #1ea4ec 4px,
-  #1f8bc5 4px,
-  #1f8bc5 10px
-);
-$bar-height: 6px;
-
-$status-width: 40px;
-
-$box-color: #986c5d;
-
-$box-color: repeating-linear-gradient(
-  45deg,
-  #986c5d,
-  #986c5d 2px,
-  #775144 2px,
-  #775144 4px
-);
-
-$lid-color: #775144;
-$box-lid-offset: 4px;
-
-$box-item-color: #be69d2;
-$box-item-thickness: 4px;
-$box-item-width: $status-width - 20;
-$box-item-height: $box-item-width;
-
-$ribbon-color: #ee0f29;
-$ribbon-width: $status-width / 4;
-
-$bow-width: 6px;
-$bow-height: 10px;
-$bow-color: darken($ribbon-color, 10);
-
-@mixin move-item($item, $top, $left, $opacity) {
-    & > .#{$item} {
-        top: $top;
-        left: $left;
-        opacity: $opacity;
-    }
-}
-
-%box-animation-5{
-    @include move-item('box_base', 50%, 0px, 1);
-    @include move-item('box_item', -30px, 0px, 0); 
-}
-
-%box-animation-4{
-    @extend %box-animation-5; 
-    @include move-item('box_lid', -20px, 0px, 0);
-    @include move-item('box_item', -10px, 0px, 1);    
-}
-
-%box-animation-3{
-    @extend %box-animation-5;
-    @include move-item('box_item', 10px, 0px, 1);
-    @include move-item('box_lid', -1px, 0px, 1);
-    @include move-item('box_ribbon', 70%, 0px, 0);
-    @include move-item('box_bow', 0px, 0px, 0);
-}
-
-%box-animation-2{
-    @extend %box-animation-5;
-    @extend %box-animation-4;
-    @extend %box-animation-3;
-    
-    @include move-item('box_ribbon', 50%, 0px, 1);
-    @include move-item('box_bow', -10px, 0px, 1);    
-}
-
-%box-animation-1{
-    @extend %box-animation-5;
-    @extend %box-animation-4;
-    @extend %box-animation-3;
-    @extend %box-animation-2;
-    
-    @include move-item('box_tag', 10px, 20px, 1);
-    @include move-item('box_string', 10px, 20px, 1);    
-      
-}
-
-@mixin traverse($n) {
-    $step: '';
-    $tab: '';
-
-    @for $i from 1 through $n {
-        $int: #{($n + 1) - $i};
-
-        & #step-#{$int}:checked #{$step} + div {
-            width: ($n - $i) * $step-width;
-        }
-
-        & #step-#{$int}:checked #{$step} + div + div + div {
-            & > .tab:nth-of-type(#{$int}) {
-                opacity: 1;
-                top: 0;
-            }
-        }
-
-        & #step-#{$int}:checked #{$step} + div + div + div + div {
-            right: - ($step-width / 2) + ($i * $step-width);
-            @extend %box-animation-#{$i}; 
-        }
-
-        $step: $step + '+ input';
-        $tab: $tab + '+ div';
-    }
-}
-
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,900');
-
-* {
-    box-sizing: border-box;
-}
-
-%center {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    margin: auto;
-}
-
-%bar {
-    height: $bar-height;
-    left: $step-width / 2;
-    background: $bar-bg;
-    transition: width $bar-transition-speed cubic-bezier(0.915, 0.015, 0.300, 1.005);
-    border-radius: $bar-height;
-    width: 0;
-    position: relative;
-    z-index: -1;
-}
-
-%counter {
-    @extend %center;
-    width: $step-point-width;
-    height: $step-point-height;
-    color: $step-point-color;
-    background: $step-point-bg;
-    line-height: $step-point-height;
-    border: $counter-spacing solid $color-bg;
-    font-size: $counter-font-size;
-    top: $bar-height / 2;
-    border-radius: 100%;
-    transition: all .4s;
-    cursor: pointer;
-    pointer-events: none;
-}
-
-%step {
-    width: $step-width;
-    font-size: $step-font-size;
-    padding: 0 $step-padding;
-    transition: all .4s;
-    float: left;
-    text-align: center;
-    position: relative;
-
-    label {
-        padding-top: $step-gap;
-        top: -20px;
-        display: block;
-        position: relative;
-        cursor: pointer;
-    }
-
-    &:before {
-        @extend %counter;
-    }
-    
-    &:hover {
-        color: white;
-        
-        &:before {
-            color: white;
-            background: #1ea4ec;
-        }
-    }
-}
-
-body {
-    font-family: $font;
-    background: $color-bg;
-    color: $color-dark;
-    text-align: center;
-    font-weight: 900;
-    .progress {
-        &_inner {
-            @include traverse($steps);
-            @extend %center;
-            height: 200px;
-            width: $form-width + px;
-
-            @for $i from 1 through $steps {
-                &__step:nth-of-type(#{$i}) {
-                    &:before {
-                        content: '#{$i}';
-                    }
-                }
-            }
-
-            &__step {
-                @extend %step;
-            }
-
-            &__bar {
-                @extend %bar;
-                &--set {
-                    @extend %bar;
-                    width: 100% - $step-width;
-                    top: - $bar-height;
-                    background: $color-mid;
-                    position: relative;
-                    z-index: -2;
-                }
-            }
-
-            &__tabs {
-                & .tab {
-                    opacity: 0;
-                    position: absolute;
-                    top: 40px;
-                    text-align: center;
-                    margin-top: $tab-spacing;
-                    box-shadow: 0px 2px 1px darken($color-bg, 10);
-                    padding: 30px;
-                    background: white;
-                    border-radius: 10px;
-                    transition: all .2s;
-
-                    h1 {
-                        margin: 0;
-                    }
-                    
-                    p {
-                        font-weight: 400;
-                        opacity: 0.8;
-                    }
-                }
-            }
-
-            &__status {
-                width: $status-width;
-                height: $status-width;
-                top: - $status-width * 2;
-                transition: right $bar-transition-speed cubic-bezier(0.915, 0.015, 0.300, 1.005);
-                transform: translateX(50%);
-                position: absolute;
-                
-                %animatable {
-                    opacity: 0;
-                    transition: all 600ms cubic-bezier(0.915, 0.015, 0.300, 1.005);
-                    transition-delay: 300ms
-                }
-                
-                div {
-                    position: absolute;
-                    @extend %animatable;
-                }
-
-                & .box_base {
-                    @extend %center;
-                    background: $box-color;
-                    width: $status-width - $box-lid-offset;
-                    height: $status-width;
-                    z-index: 1;
-                    border-radius: 1px;
-                }
-
-                & .box_lid {
-                    width: $status-width;
-                    height: $status-width / 3;
-                    background: $lid-color;
-                    z-index: 2;
-                    border-radius: 1px;
-                    top: 0;
-                }
-
-                & .box_item {
-                    @extend %center;
-                    width: $box-item-width;
-                    height: $box-item-height;
-                    background: $box-item-color;
-                    z-index: 0;
-                    border-radius: 4px;
-                    transform: rotate(45deg);
-                }
-
-                & .box_ribbon {
-                    @extend %center;
-                    width: $ribbon-width;
-                    height: $status-width + 2;
-                    background: $ribbon-color;
-                    z-index: 4;
-                    border-radius: 1px;
-                    
-                }
-                 
-                %bow {
-                    width: $bow-width;
-                    height: $bow-height;
-                    background: $bow-color;
-                    position: absolute;
-                    z-index: 3;
-                    opacity: 1;
-                    border-radius: 1px;
-                }
-
-                & .box_bow {
-                    @extend %center;
-                    top: - $bow-width;
-                    z-index: 1;
-                    transition-delay: 500ms;
-                    &__left {
-                        @extend %bow;
-                        @extend %center;
-                        left: $bow-width;
-                        transform: rotate(45deg);
-                    }
-
-                    &__right {
-                        @extend %bow;
-                        @extend %center;
-                        left: -4px;
-                        transform: rotate(-45deg);
-                    }
-                }
-                
-                // Refactor
-                
-                & .box_tag {
-                    @extend %center;
-                    width: 20px;
-                    height: 10px;
-                    background: #487ac7;
-                    z-index: 4;
-                    transform: rotate(-10deg) translateX(-40px) translateY(0px);
-                    border-radius: 2px;
-                    transition-delay: 500ms
-                }
-                
-                & .box_string {
-                    width: 17px;
-                    height: 2px;
-                    background: #343434;
-                    @extend %center;
-                    z-index: 4;
-                    transform: rotate(-39deg) translateX(-22px) translateY(-12px);
-                }
-                
-                //
-            }
-
-            input[type="radio"] {
-                display: none;
-            }
-        }
-    }
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  // background: rgba(255, 255, 255, 0.02);
 }
