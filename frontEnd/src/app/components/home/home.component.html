@@ -1,4 +1,16 @@
 <!--Profile container-->
+
+<!--
+
+    Make sure to compartmentalize and use components to represent different aspects of page
+
+-->
+
+<!--Make animated circles/random animations later-->
+
+<!--https://spline.design/-->
+<!---->
+
 <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
 
 <!--Cool ass card effect-->
@@ -51,8 +63,8 @@ https://www.npmjs.com/package/angular-dark-mode-->
                     <!--Change this to a play button? and then click to play background colour changing-->
                     <div class="interactive-buttons">
                         <img class="dark-icon hvr-grow" src="/assets/dark_mode.svg">
-                        <a id="background-change">change background  </a>
-                        <a id="scroll-projects">view projects</a>
+                        <a (click)="changeColour($event)">randomize background  </a>
+                        <a (click)="resetColour($event)">reset colours</a>
                     </div>
 
                 </div>
@@ -104,6 +116,8 @@ https://www.npmjs.com/package/angular-dark-mode-->
                 <!--Used for positioning-->
             </div>
             <h1 class="projects-header">Projects 🚀</h1>
+            <app-cards></app-cards>
+            
 
         </div>
     </div>
@@ -113,6 +127,13 @@ https://www.npmjs.com/package/angular-dark-mode-->
     <span class="background3"></span>
     <!-- <router-outlet></router-outlet> -->
     </div>
+
+    <div class="section">
+        <div class="skills-container">
+            <app-skills></app-skills>
+        </div>
+    </div>
+
 </div>
 
 

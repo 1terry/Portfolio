@@ -9,36 +9,15 @@ import { TimelineElement } from '../horizontal-timeline/timeline-element';
 })
 export class TestPageComponent{
 
-  config: any;
-  fullpage_api: any;
-  
-    constructor() {
-  
-      // for more details on config options please visit fullPage.js docs
-      this.config = {
-  
-        // fullpage options
-        licenseKey: 'YOUR LICENSE KEY HERE',
-        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
-        menu: '#menu',
-  
-        // fullpage callbacks
-        afterResize: () => {
-          console.log("After resize");
-        },
-        afterLoad: (origin, destination, direction) => {
-          console.log(origin.index);
-        }
-      };
-    }
-  
-    getRef(fullPageRef) {
-      this.fullpage_api = fullPageRef;
-    }
-
- 
-
-handleCarouselEvents(event:any) {
-  console.log(event);
-}
+  title = 'Angular 6 Project!';
+  //array of months.
+  months = ["January", "Feburary", "March", "April",
+           "May", "June", "July", "August", "September",
+           "October", "November", "December"];
+  isavailable = true;
+  myClickFunction(event) { 
+     //just added console.log which will display the event details in browser on click of the button.
+     alert("Button is clicked");
+     console.log(event);
+  }
 }

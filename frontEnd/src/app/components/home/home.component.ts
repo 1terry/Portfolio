@@ -2,18 +2,68 @@ import { Component, OnInit } from '@angular/core';
 import { inject } from '@angular/core/testing';
 import { DOCUMENT } from '@angular/common';
 import { TimelineElement } from '../horizontal-timeline/timeline-element';
+import { element } from 'protractor';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
 export class HomeComponent{
 
-  content = `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae 
-  ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, 
-  ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam 
-  quisquam, quae, temporibus dolores porro doloribus.`;
+  constructor() {
+    
+      // for more details on config options please visit fullPage.js docs
+      this.config = {
+  
+        // fullpage options
+        licenseKey: 'YOUR LICENSE KEY HERE',
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+        menu: '#menu',
+        navigation: true,
+  
+        // fullpage callbacks
+        afterResize: () => {
+          console.log("After resize");
+        },
+        afterLoad: (origin, destination, direction) => {
+          console.log(origin.index);
+        }
+      };
+    }
+
+  changeColour(event) { 
+    //just added console.log which will display the event details in browser on click of the button.
+    // alert("WARNING Colours are truly randomized so it may look like ass");
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    const randomColor2 = Math.floor(Math.random()*16777215).toString(16);
+    // var changeColour = document.getElementsByClassName("background");
+    const changeColour = Array.from(document.getElementsByClassName('flex-container') as HTMLCollectionOf<HTMLElement>)
+    const changeColour2 = Array.from(document.getElementsByClassName('projects-flex') as HTMLCollectionOf<HTMLElement>)
+
+   changeColour.forEach((element) => {
+     element.style.backgroundColor = "#" + randomColor;
+   });
+
+   changeColour2.forEach((element) => {
+    element.style.backgroundColor = "#" + randomColor2;
+  });
+ }
+
+ //Event for reseting colours
+ resetColour(event) {
+  const resetColour = Array.from(document.getElementsByClassName('flex-container') as HTMLCollectionOf<HTMLElement>)
+  const resetColour2 = Array.from(document.getElementsByClassName('projects-flex') as HTMLCollectionOf<HTMLElement>)
+
+  resetColour.forEach((element) => {
+    element.style.background = "#E2D8D8";
+  });
+
+  resetColour2.forEach((element) => {
+    element.style.background = "#BDBDBD";
+  });
+ }
 
   // constructor(@inject(DOCUMENT) private document: Document) { }
   active = 1;
@@ -60,29 +110,22 @@ export class HomeComponent{
   config: any;
   fullpage_api: any;
   
-    constructor() {
   
-      // for more details on config options please visit fullPage.js docs
-      this.config = {
-  
-        // fullpage options
-        licenseKey: 'YOUR LICENSE KEY HERE',
-        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
-        menu: '#menu',
-        navigation: true,
-  
-        // fullpage callbacks
-        afterResize: () => {
-          console.log("After resize");
-        },
-        afterLoad: (origin, destination, direction) => {
-          console.log(origin.index);
-        }
-      };
-    }
   
     getRef(fullPageRef) {
       this.fullpage_api = fullPageRef;
     }
-
 }
+
+
+// var changeColour = document.getElementById("background-change");
+
+// function handleClick(this: HTMLElement) {
+//     console.log("Clicked!");
+//     const randomColor = Math.floor(Math.random()*16777215).toString(16);
+//     changeColour.innerHTML =  "#" + randomColor;
+//     this.removeEventListener("click", handleClick);
+// }
+
+// changeColour?.addEventListener("click", handleClick, false);
+

@@ -18,6 +18,8 @@ import { ConstructionComponent } from './components/construction/construction.co
 import { TestPageComponent } from './components/test-page/test-page.component'
 import { HorizontalTimelineComponent } from './components/horizontal-timeline/horizontal-timeline.component';
 import { AngularFullpageModule } from '@fullpage/angular-fullpage';
+import { CardsComponent } from './components/cards/cards.component';
+import { SkillsComponent } from './skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { AngularFullpageModule } from '@fullpage/angular-fullpage';
     PortfolioComponent,
     ConstructionComponent,
     TestPageComponent,
-    HorizontalTimelineComponent
+    HorizontalTimelineComponent,
+    CardsComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,

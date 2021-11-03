@@ -1,10 +1,21 @@
-<div fullpage id="fullpage" [options]="config" (ref)="getRef($event)">
-    <div class="section">Some section1</div>
-      <div class="section" (click)="fullpage_api.moveSectionDown()">Some section2</div>
-      <div class="section">
-          <div class="slide">Slide 2.1</div>
-          <div class="slide">Slide 2.2</div>
-          <div class="slide">Slide 2.3</div>
-      </div>
-      <div class="section" (click)="fullpage_api.moveTo('secondPage', 2)">Some section4</div>
-  </div>
+<div style = "text-align:center">
+    <h1>
+       Welcome to {{title}}.
+    </h1>
+ </div>
+ <div> Months :
+    <select>
+       <option *ngFor = "let i of months">{{i}}</option>
+    </select>
+ </div>
+ <br/>
+ <div>
+    <span *ngIf = "isavailable; then condition1 else condition2">
+       Condition is valid.
+    </span>
+    <ng-template #condition1>Condition is valid</ng-template>
+    <ng-template #condition2>Condition is invalid</ng-template>
+ </div>
+ <button (click)="myClickFunction($event)">
+    Click Me
+ </button>
