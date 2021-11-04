@@ -38,9 +38,11 @@ export class HomeComponent{
     // alert("WARNING Colours are truly randomized so it may look like ass");
     const randomColor = Math.floor(Math.random()*16777215).toString(16);
     const randomColor2 = Math.floor(Math.random()*16777215).toString(16);
+    const randomColor3 = Math.floor(Math.random()*16777215).toString(16);
     // var changeColour = document.getElementsByClassName("background");
     const changeColour = Array.from(document.getElementsByClassName('flex-container') as HTMLCollectionOf<HTMLElement>)
     const changeColour2 = Array.from(document.getElementsByClassName('projects-flex') as HTMLCollectionOf<HTMLElement>)
+    const changeColour3 = Array.from(document.getElementsByClassName('skills-container') as HTMLCollectionOf<HTMLElement>)
 
    changeColour.forEach((element) => {
      element.style.backgroundColor = "#" + randomColor;
@@ -49,12 +51,17 @@ export class HomeComponent{
    changeColour2.forEach((element) => {
     element.style.backgroundColor = "#" + randomColor2;
   });
+
+    changeColour3.forEach((element) => {
+    element.style.backgroundColor = "#" + randomColor3;
+  });
  }
 
  //Event for reseting colours
  resetColour(event) {
   const resetColour = Array.from(document.getElementsByClassName('flex-container') as HTMLCollectionOf<HTMLElement>)
   const resetColour2 = Array.from(document.getElementsByClassName('projects-flex') as HTMLCollectionOf<HTMLElement>)
+  const resetColour3 = Array.from(document.getElementsByClassName('skills-container') as HTMLCollectionOf<HTMLElement>)
 
   resetColour.forEach((element) => {
     element.style.background = "#E2D8D8";
@@ -62,6 +69,10 @@ export class HomeComponent{
 
   resetColour2.forEach((element) => {
     element.style.background = "#BDBDBD";
+  });
+
+  resetColour3.forEach((element) => {
+    element.style.background = "#D6D6D6";
   });
  }
 
