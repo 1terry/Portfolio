@@ -14,6 +14,8 @@ export class CardsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
+  toASL():void{
+    window.open("https://github.com/JTao02/ASL_Alphabet_Interpretation","_blank");
+  }
 
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { inject } from '@angular/core/testing';
 import { DOCUMENT } from '@angular/common';
-import { TimelineElement } from '../horizontal-timeline/timeline-element';
 import { element } from 'protractor';
 
 @Component({

@@ -312,7 +312,8 @@ body {
   -webkit-transform: translate(0%, 0%);
   transform: translate(0%, 0%);
   overflow: hidden;
-  color: #ff0000;
+  // color: #ff0000;
+  color:#e420e4;
   font-size: 20px;
   letter-spacing: 2.5px;
   text-align: center;
@@ -343,6 +344,8 @@ body {
   position: absolute;
 }
 
+  // from(rgba(43, 8, 8, 0)),
+  // to(#d92626)
 .animated-button1 span:nth-child(1) {
   top: 0px;
   left: 0px;
@@ -353,9 +356,10 @@ body {
     right top,
     left top,
     from(rgba(43, 8, 8, 0)),
-    to(#d92626)
+    to(#e420e4)
+
   );
-  background: linear-gradient(to left, rgba(43, 8, 8, 0), #d92626);
+  background: linear-gradient(to left, rgba(43, 8, 8, 0), #e420e4);
   -webkit-animation: 2s animateTop linear infinite;
   animation: 2s animateTop linear infinite;
 }
@@ -381,9 +385,9 @@ body {
     left bottom,
     left top,
     from(rgba(43, 8, 8, 0)),
-    to(#d92626)
+    to(#e420e4)
   );
-  background: linear-gradient(to top, rgba(43, 8, 8, 0), #d92626);
+  background: linear-gradient(to top, rgba(43, 8, 8, 0), #e420e4);
   -webkit-animation: 2s animateRight linear -1s infinite;
   animation: 2s animateRight linear -1s infinite;
 }
@@ -409,9 +413,9 @@ body {
     left top,
     right top,
     from(rgba(43, 8, 8, 0)),
-    to(#d92626)
+    to(#e420e4)
   );
-  background: linear-gradient(to right, rgba(43, 8, 8, 0), #d92626);
+  background: linear-gradient(to right, rgba(43, 8, 8, 0), #e420e4);
   -webkit-animation: 2s animateBottom linear infinite;
   animation: 2s animateBottom linear infinite;
 }
@@ -437,9 +441,9 @@ body {
     left top,
     left bottom,
     from(rgba(43, 8, 8, 0)),
-    to(#d92626)
+    to(#e420e4)
   );
-  background: linear-gradient(to bottom, rgba(43, 8, 8, 0), #d92626);
+  background: linear-gradient(to bottom, rgba(43, 8, 8, 0), #e420e4);
   -webkit-animation: 2s animateLeft linear -1s infinite;
   animation: 2s animateLeft linear -1s infinite;
 }

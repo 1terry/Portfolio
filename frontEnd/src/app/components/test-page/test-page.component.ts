@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TimelineElement } from '../horizontal-timeline/timeline-element';
 
 
 @Component({
