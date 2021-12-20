@@ -13,6 +13,11 @@
   //   margin-left: 100px;
   //   top: 50%;
 }
+
+.wrapper ul{
+  list-style: none;
+}
+
 .container {
   width: 40%;
   height: 85vh;
@@ -92,4 +97,12 @@ footer{
   position: absolute;
   bottom: 10px;
   text-align: center;
+}
+
+.Language{
+  float: left;
+}
+
+.Libraries{
+  float: right;
 }
