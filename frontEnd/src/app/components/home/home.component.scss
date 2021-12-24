@@ -389,25 +389,28 @@ Skills section
     height: 200px;
   }
 
-  .intro-header{
+  .intro-header {
     margin-top: -10px;
   }
 
-  .wrapper{
+  .wrapper {
     left: 13.7%;
     margin-top: 80px;
   }
 
-  .projects-container{
+  .projects-container {
     top: 75px;
   }
-
 }
 
-@media screen and (max-width: 1430px) {
+@media screen and (max-width: 1600px) {
   .background {
     height: 1200px;
     // width: 100%;
+  }
+  .projects-header {
+    margin-top: -10px;
+    margin-bottom: 40px;
   }
 }
 
