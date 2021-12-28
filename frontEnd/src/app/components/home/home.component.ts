@@ -32,6 +32,8 @@ export class HomeComponent{
       };
     }
 
+
+
   changeColour(event) { 
     //just added console.log which will display the event details in browser on click of the button.
     // alert("WARNING Colours are truly randomized so it may look like ass");
@@ -45,6 +47,7 @@ export class HomeComponent{
 
    changeColour.forEach((element) => {
      element.style.backgroundColor = "#" + randomColor;
+   
    });
 
    changeColour2.forEach((element) => {
@@ -74,6 +77,51 @@ export class HomeComponent{
     element.style.background = "#D6D6D6";
   });
  }
+
+ gradientOn(event){
+  const changeColour = Array.from(document.getElementsByClassName('flex-container') as HTMLCollectionOf<HTMLElement>)
+  const changeColour2 = Array.from(document.getElementsByClassName('projects-flex') as HTMLCollectionOf<HTMLElement>)
+  const changeColour3 = Array.from(document.getElementsByClassName('skills-container') as HTMLCollectionOf<HTMLElement>)
+
+  changeColour.forEach((element) => {
+    element.style.background = "linear-gradient(45deg,#F17C58, #E94584, #24AADB , #27DBB1,#FFDC18, #FF3706);"
+  });
+ 
+  changeColour2.forEach((element) => {
+   element.style.backgroundColor = "#" + 123123;
+ });
+ 
+   changeColour3.forEach((element) => {
+   element.style.backgroundColor = "#" + 123123;
+ });
+
+ }
+
+
+ //Dark mode stuff
+ darkMode(event) { 
+  //just added console.log which will display the event details in browser on click of the button.
+  // alert("WARNING Colours are truly randomized so it may look like ass");
+  const randomColor = Math.floor(Math.random()*16777215).toString(16);
+  const randomColor2 = Math.floor(Math.random()*16777215).toString(16);
+  const randomColor3 = Math.floor(Math.random()*16777215).toString(16);
+  // var changeColour = document.getElementsByClassName("background");
+  const changeColour = Array.from(document.getElementsByClassName('flex-container') as HTMLCollectionOf<HTMLElement>)
+  const changeColour2 = Array.from(document.getElementsByClassName('projects-flex') as HTMLCollectionOf<HTMLElement>)
+  const changeColour3 = Array.from(document.getElementsByClassName('skills-container') as HTMLCollectionOf<HTMLElement>)
+
+ changeColour.forEach((element) => {
+   element.style.backgroundColor = "#" + randomColor;
+ });
+
+ changeColour2.forEach((element) => {
+  element.style.backgroundColor = "#" + randomColor2;
+});
+
+  changeColour3.forEach((element) => {
+  element.style.backgroundColor = "#" + randomColor3;
+});
+}
 
   // constructor(@inject(DOCUMENT) private document: Document) { }
   active = 1;

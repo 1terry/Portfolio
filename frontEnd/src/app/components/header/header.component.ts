@@ -13,4 +13,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  toResume():void{
+    window.open("https://drive.google.com/file/d/1cNTnfjZcLSsWIwO6G4vAAhnAf1-th5JB/view?usp=sharing");
+  }
+
 }

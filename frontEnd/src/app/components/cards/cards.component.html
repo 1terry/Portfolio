@@ -2,7 +2,7 @@
 <div class="container">
 
     <!--Card 1-->
-    <div class="card hvr-grow glowy cards">
+    <div class="card hvr-grow glowy cards" (click)="toASL()">
       <div class="card-header">
         <img src="/assets/ASL.png" alt="ASL " />
       </div>
@@ -13,7 +13,6 @@
         </h4>
         <p>
           Created using OpenCV and python. The program translates hand gestures into letters from ASL. 
-          view the project <a (click)="toASL()"> here </a>
         </p>
         <!-- <div class="user">
           <img src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
@@ -27,7 +26,7 @@
 
     <!--Card 2-->
     
-    <div class="card hvr-grow glowy cards">
+    <div class="card hvr-grow glowy cards" (click)="toCOVID()">
       <div class="card-header">
         <img src="/assets/COVID.png" alt="Covid-19 tracker" />
       </div>
@@ -45,7 +44,7 @@
     <!--Card 3-->
     <!-- Make more tags  -->
 
-    <div class="card hvr-grow glowy cards">
+    <div class="card hvr-grow glowy cards" (click)="toCO2()">
       <div class="card-header">
         <img src="/assets/WinHacks.png" alt="CO2-Emissions" />
       </div>
@@ -77,9 +76,12 @@
         </li>
     </ul>
     </nav> -->
+    
 </div>
 
 
-
+<!-- <footer>
+  <p> Coded, designed, and deployed with ❤️ by Terry Ju, 2021</p>
+</footer> -->
 
 <!-- <router-outlet></router-outlet> -->

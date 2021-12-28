@@ -401,8 +401,14 @@ Skills section
   .projects-container {
     top: 75px;
   }
+
+  .projects-header {
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
 }
 
+//Laptop screen
 @media screen and (max-width: 1600px) {
   .background {
     height: 1200px;
@@ -411,6 +417,15 @@ Skills section
   .projects-header {
     margin-top: -10px;
     margin-bottom: 40px;
+  }
+
+  .intro-header {
+    margin-top: -60px;
+  }
+
+  .wrapper {
+    left: 5%;
+    top: 150px;
   }
 }
 
