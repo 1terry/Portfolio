@@ -26,5 +26,9 @@ export class CardsComponent implements OnInit {
     window.open("https://vast-wave-55816.herokuapp.com/");
   }
 
+  toGit():void{
+    window.open("https://github.com/1terry");
+  }
+
 
 }
