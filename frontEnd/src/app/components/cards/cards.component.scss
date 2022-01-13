@@ -313,7 +313,7 @@ body {
   transform: translate(0%, 0%);
   overflow: hidden;
   // color: #ff0000;
-  color:#e420e4;
+  color: #e420e4;
   font-size: 20px;
   letter-spacing: 2.5px;
   text-align: center;
@@ -344,8 +344,8 @@ body {
   position: absolute;
 }
 
-  // from(rgba(43, 8, 8, 0)),
-  // to(#d92626)
+// from(rgba(43, 8, 8, 0)),
+// to(#d92626)
 .animated-button1 span:nth-child(1) {
   top: 0px;
   left: 0px;
@@ -357,7 +357,6 @@ body {
     left top,
     from(rgba(43, 8, 8, 0)),
     to(#e420e4)
-
   );
   background: linear-gradient(to left, rgba(43, 8, 8, 0), #e420e4);
   -webkit-animation: 2s animateTop linear infinite;
@@ -2120,3 +2119,19 @@ body {
   }
 }
 /*# sourceMappingURL=button.css.map */
+
+@media screen and (max-width: 2000px) {
+  .animated-button1 {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .container {
+    top: -30px;
+    position: relative;
+  }
+  .animated-button1 {
+    margin-top: 20px;
+  }
+}
