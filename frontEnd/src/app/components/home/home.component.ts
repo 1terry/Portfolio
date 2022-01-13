@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { inject } from '@angular/core/testing';
 import { DOCUMENT } from '@angular/common';
 import { element } from 'protractor';
+import { info } from 'console';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +11,8 @@ import { element } from 'protractor';
 })
 
 export class HomeComponent{
+
+  // toggleControl = new FormControl(false);
 
   constructor() {
     
@@ -29,8 +32,8 @@ export class HomeComponent{
         afterLoad: (origin, destination, direction) => {
           console.log(origin.index);
         }
-      };
-    }
+    };
+  }
 
   changeColour(event) { 
     //just added console.log which will display the event details in browser on click of the button.
@@ -74,6 +77,16 @@ export class HomeComponent{
     element.style.background = "#D6D6D6";
   });
  }
+
+darkMode(event){
+  let isPresent:boolean = true;
+  const icon = Array.from(document.getElementById('darkIcon') as HTMLFormElement)
+
+
+  // if (icon.array.forEach(element => {
+    
+  // });)
+}
 
   // constructor(@inject(DOCUMENT) private document: Document) { }
   active = 1;
