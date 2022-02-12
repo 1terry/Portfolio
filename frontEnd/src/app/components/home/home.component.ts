@@ -78,14 +78,8 @@ export class HomeComponent{
   });
  }
 
-darkMode(event){
-  let isPresent:boolean = true;
-  const icon = Array.from(document.getElementById('darkIcon') as HTMLFormElement)
-
-
-  // if (icon.array.forEach(element => {
-    
-  // });)
+ toggleDarkTheme(): void {
+  document.body.classList.toggle('dark-theme');
 }
 
   // constructor(@inject(DOCUMENT) private document: Document) { }

@@ -46,7 +46,8 @@ import { SkillsComponent } from './skills/skills.component';
     NoopAnimationsModule,
     BrowserAnimationsModule,
     MatInputModule,
-    AngularFullpageModule
+    AngularFullpageModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

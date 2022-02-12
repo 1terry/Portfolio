@@ -11,7 +11,7 @@ body {
 }
 .container {
   display: flex;
-  width: 1040px;
+  width: 2000px;
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin-top: -85px;
@@ -308,7 +308,7 @@ body {
   margin-top: 15px;
   //   padding-top: 0px;
   //   border-radius: 15px;
-  display: inline-block;
+  display: inline-block;  
   -webkit-transform: translate(0%, 0%);
   transform: translate(0%, 0%);
   overflow: hidden;
