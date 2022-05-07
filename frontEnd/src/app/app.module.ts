@@ -19,6 +19,8 @@ import { TestPageComponent } from './components/test-page/test-page.component'
 import { AngularFullpageModule } from '@fullpage/angular-fullpage';
 import { CardsComponent } from './components/cards/cards.component';
 import { SkillsComponent } from './skills/skills.component';
+import { ExperienceComponent } from './components/experience/experience.component';
+import { FollowCursorComponent } from './components/follow-cursor/follow-cursor.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { SkillsComponent } from './skills/skills.component';
     ConstructionComponent,
     TestPageComponent,
     CardsComponent,
-    SkillsComponent
+    SkillsComponent,
+    ExperienceComponent,
+    FollowCursorComponent
   ],
   imports: [
     BrowserModule,

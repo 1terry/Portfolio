@@ -6,14 +6,16 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
+@import '~animate.css/animate.min';
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $app-primary: mat-palette($mat-teal);
-$app-accent:  mat-palette($mat-pink, A200, A100, A400);
+$app-accent: mat-palette($mat-pink, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$app-warn:    mat-palette($mat-red);
+$app-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
 $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
@@ -21,20 +23,18 @@ $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($app-theme);  
+@include angular-material-theme($app-theme);
 
 // Create the theme object (a Sass map containing all of the palettes).
 $app-dark-theme: mat-dark-theme($app-primary, $app-accent, $app-warn);
 
-.darkMode{
+.darkMode {
   @include angular-material-theme($app-dark-theme);
 }
 
 
 
-body.dark-theme{
-  
-}
+body.dark-theme {}
 
 
 * {
@@ -53,7 +53,6 @@ body.dark-theme{
 
 .sec1 {
   top: -15px;
-  // position: absolute;
   height: 100vh;
 }
 
@@ -72,7 +71,6 @@ body.dark-theme{
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  // background: rgb(226, 216, 216);
   background: transparent;
 }
 
@@ -80,7 +78,6 @@ body.dark-theme{
   font-size: 4rem;
   margin-top: -60px;
   margin-bottom: 0px;
-  // background: rgb(226, 216, 216);
   background: transparent;
 }
 
@@ -92,10 +89,8 @@ body.dark-theme{
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  // height: 100%;
   padding-left: 2.5%;
   padding-right: 2.5%;
-  // background: rgb(226, 216, 216);
   background: transparent;
 }
 
@@ -107,7 +102,6 @@ body.dark-theme{
   margin: 0;
   list-style: none;
   background: rgb(226, 216, 216);
-  // background: transparent;
 }
 
 .right-flex {
@@ -115,7 +109,6 @@ body.dark-theme{
   flex-flow: row wrap;
   justify-content: space-around;
   width: 600px;
-  // height: 100%;
   flex-shrink: 1;
   margin-top: 1%;
   padding-left: 2.5%;
@@ -123,7 +116,6 @@ body.dark-theme{
   padding-bottom: 0;
   margin: 0;
   list-style: none;
-  // background: whitesmoke;
   background: inherit;
 }
 
@@ -138,7 +130,6 @@ body.dark-theme{
   border-radius: 15px;
   margin-left: 20%;
   z-index: 1;
-  // background-color: rgb(182, 182, 182);
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
   margin-top: -130px;
   overflow: hidden;
@@ -162,7 +153,6 @@ body.dark-theme{
   height: 250px;
   margin-top: 105.5px;
   z-index: 3;
-  // box-shadow: 0.3rem 0.3rem 0.5rem 0 rgba(0, 0, 0, 0.3);
 }
 
 //Overlay effect
@@ -175,13 +165,15 @@ body.dark-theme{
 
 .overlay {
   all: initial;
+
   * {
     all: unset;
   }
-  font-family: century-gothic, sans-serif;
+
+  font-family: century-gothic,
+  sans-serif;
   font-weight: 400;
   font-style: normal;
-  // position: absolute;
   background-color: rgb(179, 7, 179);
   overflow: hidden;
   width: 231px;
@@ -246,17 +238,13 @@ body.dark-theme{
   justify-content: space-around;
   border-radius: 15px;
   z-index: 1;
-  // box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
 
 .intro-container h1 {
   background: transparent;
   z-index: 2;
-  // top: 4%;
-  // left: 2%;
   font-size: 2.7em;
-  // margin-bottom: 50px;
 }
 
 #intro-text {
@@ -283,6 +271,7 @@ body.dark-theme{
 .dark-icon:hover {
   cursor: pointer;
 }
+
 //Buttons
 #intro-text a {
   margin-left: 80px;
@@ -324,10 +313,7 @@ body.dark-theme{
 //
 
 .projects-flex {
-  // border-radius: 50px;
-  // display: flex;
-  // position: absolute;
-  // height: 900px;t
+
   margin-top: -15px;
   height: 100vh;
   width: 100vw;
@@ -360,8 +346,8 @@ body.dark-theme{
 .skills-container {
   margin-top: 0px;
   height: 100vh;
-  padding-top: 100px;
-
+  padding-top: 70px;
+  padding-left: 55px;
   background-color: rgb(214, 214, 214);
 }
 
@@ -392,14 +378,25 @@ Skills section
 }
 
 .typing-demo {
+  animation-delay: 7s;
   width: 22ch;
-  animation: typing 2.5s steps(30), blink 0.5s step-end infinite alternate;
+  animation: typing 2.2s steps(30), blink 0.4s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
   font-family: monospace;
   font-size: 2.5em;
   background: transparent;
+}
+
+.welcome-intro {
+  animation-delay: 1.5s;
+  font-size: 2.5em;
+  background: transparent;
+  width: 22ch;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: monospace;
 }
 
 @keyframes typing {
@@ -453,6 +450,7 @@ Skills section
     height: 1200px;
     // width: 100%;
   }
+
   .projects-header {
     margin-top: -10px;
     margin-bottom: 40px;
@@ -472,6 +470,7 @@ Skills section
   .right-flex {
     width: 100%;
   }
+
   .intro-container {
     width: 100%;
     height: 100%;
@@ -507,6 +506,7 @@ Skills section
   .right-flex {
     width: 100%;
   }
+
   .intro-container {
     width: 100%;
     height: 150%;
@@ -576,6 +576,7 @@ Skills section
   top: 2rem;
   margin-top: -75px;
 }
+
 .Iam p {
   height: 50px;
   float: left;
@@ -584,6 +585,7 @@ Skills section
   position: absolute;
   left: 0.25em;
 }
+
 .Iam b {
   float: left;
   overflow: hidden;
@@ -592,6 +594,7 @@ Skills section
   background: transparent;
   left: 35%;
 }
+
 .Iam .innerIam {
   display: inline-block;
   color: #e74c3c;
@@ -623,19 +626,24 @@ Skills section
   -o-animation-delay: 1s;
   animation-delay: 1s;
 }
+
 @keyframes move {
   0% {
     top: 0px;
   }
+
   20% {
     top: -50px;
   }
+
   40% {
     top: -100px;
   }
+
   60% {
     top: -150px;
   }
+
   80% {
     top: -200px;
   }
@@ -645,60 +653,77 @@ Skills section
   0% {
     top: 0px;
   }
+
   20% {
     top: -50px;
   }
+
   40% {
     top: -100px;
   }
+
   60% {
     top: -150px;
   }
+
   80% {
     top: -200px;
   }
 }
+
 @-moz-keyframes move {
   0% {
     top: 0px;
   }
+
   20% {
     top: -50px;
   }
+
   40% {
     top: -100px;
   }
+
   60% {
     top: -150px;
   }
+
   80% {
     top: -200px;
   }
 }
+
 @-o-keyframes move {
   0% {
     top: 0px;
   }
+
   20% {
     top: -50px;
   }
+
   40% {
     top: -100px;
   }
+
   60% {
     top: -150px;
   }
+
   80% {
     top: -200px;
   }
 }
+
 @keyframes move {
   3% {
     top: 0px;
   }
+
   36% {
     top: -50px;
   }
+
   70% {
     top: -100px;
   }
@@ -708,4 +733,3 @@ Skills section
   /* 60% { top: -150px; }
       80% { top: -200px; } */
 }
-
