@@ -1,5 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-follow-cursor',
@@ -10,46 +9,29 @@ export class FollowCursorComponent implements OnInit {
 
   constructor() { }
 
+  // Initialize circle here probs
   ngOnInit(): void {
   }
-  name = 'Angular 5';
-  state = 'center';
 
-  @HostListener('mousemove', ['$event'])
-  mouseMove($event: MouseEvent) {
-    const topLeft = $event.clientX < window.innerWidth / 2 &&
-      $event.clientY < window.innerHeight / 2;
-    const topRight = $event.clientX > window.innerWidth / 2 &&
-      $event.clientY < window.innerHeight / 2;
-    const bottomLeft = $event.clientX < window.innerWidth / 2 &&
-      $event.clientY > window.innerHeight / 2;
-    const bottomRight = $event.clientX > window.innerWidth / 2 &&
-      $event.clientY > window.innerHeight / 2;
+  update() {
+    let c = document.getElementById("ball") as HTMLCanvasElement;
+    let ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+    ctx.stroke();
 
-    if (topLeft) this.moveToTopLeft();
-    if (topRight) this.moveToTopRight();
-    if (bottomLeft) this.moveToBottomLeft();
-    if (bottomRight) this.moveToBottomRight();
+    // Line algorithm: pointx and y from cursor vs point 
+    // Move set amount every tick towards cursor if behind cursor, otherwise 
 
+    // Here we track pointer
+    let pointerX = -1;
+    let pointerY = -1;
+    document.onmousemove = function (event) {
+      pointerX = event.pageX;
+      pointerY = event.pageY;
+    }
   }
 
-  moveToBottomLeft() {
-    this.state = 'bottomLeft';
-  }
+  // https://www.codegrepper.com/code-examples/javascript/get+cursor+position+javascript
 
-  moveToBottomRight() {
-    this.state = 'bottomRight';
-  }
-
-  moveToTopRight() {
-    this.state = 'topRight';
-  }
-
-  moveToTopLeft() {
-    this.state = 'topLeft';
-  }
-
-  center() {
-    this.state = 'center';
-  }
 }
